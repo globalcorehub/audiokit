@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AudioKit - Web Audio API & Media Studio - 纯前端免上传 Web Audio 音频处理工作室</title>
-  <meta name="description" content="实时渲染音频波形并精确截取、预估音频体积与推流带宽、麦克风拾音检测赫兹与音高、手动打拍测速节拍器。">
-  <link rel="canonical" href="https://audiokit.globalcorehub.com/zh/">
+  <title>在线音频波形剪切与铃声截取器 - 纯前端免上传高保真 WAV 导出 | AudioKit - Web Audio API & Media Studio</title>
+  <meta name="description" content="拖入音频即可实时渲染高清晰度声波波形图，精确定位毫秒级起止节点，无损截取并导出为标准 WAV 音频文件，严守商业音乐与隐私。">
+  <link rel="canonical" href="https://audiokit.globalcorehub.com/zh/audio-waveform-cutter-trimmer">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://audiokit.globalcorehub.com/sitemap.xml">
 
   <!-- Dynamic Zero-Latency SVG Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2310b981'/><text y='70' x='18' font-size='65' font-family='monospace' font-weight='bold' fill='%230c0e14'>&gt;_</text></svg>">
 
   <!-- International SEO hreflang tags (7 Languages) -->
-  <link rel="alternate" hreflang="en" href="https://audiokit.globalcorehub.com/" />
-  <link rel="alternate" hreflang="zh-CN" href="https://audiokit.globalcorehub.com/zh" />
-  <link rel="alternate" hreflang="zh" href="https://audiokit.globalcorehub.com/zh" />
-  <link rel="alternate" hreflang="es" href="https://audiokit.globalcorehub.com/es" />
-  <link rel="alternate" hreflang="pt" href="https://audiokit.globalcorehub.com/pt" />
-  <link rel="alternate" hreflang="de" href="https://audiokit.globalcorehub.com/de" />
-  <link rel="alternate" hreflang="fr" href="https://audiokit.globalcorehub.com/fr" />
-  <link rel="alternate" hreflang="ja" href="https://audiokit.globalcorehub.com/ja" />
-  <link rel="alternate" hreflang="x-default" href="https://audiokit.globalcorehub.com/" />
+  <link rel="alternate" hreflang="en" href="https://audiokit.globalcorehub.com/audio-waveform-cutter-trimmer" />
+  <link rel="alternate" hreflang="zh-CN" href="https://audiokit.globalcorehub.com/zh/audio-waveform-cutter-trimmer" />
+  <link rel="alternate" hreflang="zh" href="https://audiokit.globalcorehub.com/zh/audio-waveform-cutter-trimmer" />
+  <link rel="alternate" hreflang="es" href="https://audiokit.globalcorehub.com/es/audio-waveform-cutter-trimmer" />
+  <link rel="alternate" hreflang="pt" href="https://audiokit.globalcorehub.com/pt/audio-waveform-cutter-trimmer" />
+  <link rel="alternate" hreflang="de" href="https://audiokit.globalcorehub.com/de/audio-waveform-cutter-trimmer" />
+  <link rel="alternate" hreflang="fr" href="https://audiokit.globalcorehub.com/fr/audio-waveform-cutter-trimmer" />
+  <link rel="alternate" hreflang="ja" href="https://audiokit.globalcorehub.com/ja/audio-waveform-cutter-trimmer" />
+  <link rel="alternate" hreflang="x-default" href="https://audiokit.globalcorehub.com/audio-waveform-cutter-trimmer" />
 
   <!-- Open Graph & Social Cards -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://audiokit.globalcorehub.com/zh/">
-  <meta property="og:title" content="AudioKit - Web Audio API & Media Studio - 纯前端免上传 Web Audio 音频处理工作室">
-  <meta property="og:description" content="实时渲染音频波形并精确截取、预估音频体积与推流带宽、麦克风拾音检测赫兹与音高、手动打拍测速节拍器。">
+  <meta property="og:url" content="https://audiokit.globalcorehub.com/zh/audio-waveform-cutter-trimmer">
+  <meta property="og:title" content="在线音频波形剪切与铃声截取器 - 纯前端免上传高保真 WAV 导出 | AudioKit - Web Audio API & Media Studio">
+  <meta property="og:description" content="拖入音频即可实时渲染高清晰度声波波形图，精确定位毫秒级起止节点，无损截取并导出为标准 WAV 音频文件，严守商业音乐与隐私。">
   <meta property="og:site_name" content="AudioKit - Web Audio API & Media Studio">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:image" content="https://audiokit.globalcorehub.com/og-image.svg">
@@ -36,8 +36,8 @@
 
   <!-- Twitter Social Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AudioKit - Web Audio API & Media Studio - 纯前端免上传 Web Audio 音频处理工作室">
-  <meta name="twitter:description" content="实时渲染音频波形并精确截取、预估音频体积与推流带宽、麦克风拾音检测赫兹与音高、手动打拍测速节拍器。">
+  <meta name="twitter:title" content="在线音频波形剪切与铃声截取器 - 纯前端免上传高保真 WAV 导出 | AudioKit - Web Audio API & Media Studio">
+  <meta name="twitter:description" content="拖入音频即可实时渲染高清晰度声波波形图，精确定位毫秒级起止节点，无损截取并导出为标准 WAV 音频文件，严守商业音乐与隐私。">
   <meta name="twitter:image" content="https://audiokit.globalcorehub.com/og-image.svg">
 
   <!-- Multi-Theme Typography Imports (JetBrains Mono, Plus Jakarta Sans, Space Grotesk) -->
@@ -189,19 +189,51 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "AudioKit - Web Audio API & Media Studio - 纯前端免上传 Web Audio 音频处理工作室",
-    "url": "https://audiokit.globalcorehub.com/zh/",
-    "description": "实时渲染音频波形并精确截取、预估音频体积与推流带宽、麦克风拾音检测赫兹与音高、手动打拍测速节拍器。",
+    "name": "在线音频波形剪切与铃声截取器 - 纯前端免上传高保真 WAV 导出",
+    "url": "https://audiokit.globalcorehub.com/zh/audio-waveform-cutter-trimmer",
+    "description": "拖入音频即可实时渲染高清晰度声波波形图，精确定位毫秒级起止节点，无损截取并导出为标准 WAV 音频文件，严守商业音乐与隐私。",
     "applicationCategory": "MultimediaApplication",
     "operatingSystem": "All",
     "offers": {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD"
+    },
+    "potentialAction": {
+      "@type": "ConsumeAction",
+      "target": "https://audiokit.globalcorehub.com/zh/audio-waveform-cutter-trimmer"
     }
   }
   </script>
   
+  
+  <!-- BreadcrumbList Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://audiokit.globalcorehub.com/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "全部工具",
+        "item": "https://audiokit.globalcorehub.com/zh/#tools-grid"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "在线音频波形剪切与铃声截取器 - 纯前端免上传高保真 WAV 导出",
+        "item": "https://audiokit.globalcorehub.com/zh/audio-waveform-cutter-trimmer"
+      }
+    ]
+  }
+  </script>
   
 
   <!-- Tech Stack Scripts (Alpine.js / Canvas loop / Terminal runtime) -->
@@ -394,37 +426,37 @@
           </button>
           <div id="lang-dropdown-menu" class="hidden absolute right-0 mt-2 w-36 rounded-xl bg-[#160e2b] border border-[#3b1d68] hover:border-[#c084fc] shadow-[0_4px_25px_rgba(192,132,252,0.15)] z-50 py-1.5 font-mono text-xs shadow-2xl">
             
-            <a href="/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+            <a href="/audio-waveform-cutter-trimmer" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
               <span>[EN] English</span>
               <span class="text-[10px] opacity-50 uppercase">en</span>
             </a>
             
-            <a href="/zh/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition font-bold text-emerald-400">
+            <a href="/zh/audio-waveform-cutter-trimmer" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition font-bold text-emerald-400">
               <span>[ZH] 简体中文</span>
               <span class="text-[10px] opacity-50 uppercase">zh</span>
             </a>
             
-            <a href="/es/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+            <a href="/es/audio-waveform-cutter-trimmer" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
               <span>[ES] Español</span>
               <span class="text-[10px] opacity-50 uppercase">es</span>
             </a>
             
-            <a href="/pt/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+            <a href="/pt/audio-waveform-cutter-trimmer" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
               <span>[PT] Português</span>
               <span class="text-[10px] opacity-50 uppercase">pt</span>
             </a>
             
-            <a href="/de/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+            <a href="/de/audio-waveform-cutter-trimmer" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
               <span>[DE] Deutsch</span>
               <span class="text-[10px] opacity-50 uppercase">de</span>
             </a>
             
-            <a href="/fr/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+            <a href="/fr/audio-waveform-cutter-trimmer" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
               <span>[FR] Français</span>
               <span class="text-[10px] opacity-50 uppercase">fr</span>
             </a>
             
-            <a href="/ja/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+            <a href="/ja/audio-waveform-cutter-trimmer" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
               <span>[JA] 日本語</span>
               <span class="text-[10px] opacity-50 uppercase">ja</span>
             </a>
@@ -525,129 +557,269 @@
   <!-- Main Content Area -->
   <main class="flex-grow py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
     
-
+    <!-- Semantic Visual Breadcrumb Navigation -->
+    <nav class="max-w-5xl mx-auto mb-4 sm:mb-6 flex items-center space-x-2 text-xs font-mono opacity-70" aria-label="Breadcrumb">
+      <a href="/zh/" class="hover:underline opacity-80 hover:opacity-100 flex items-center space-x-1">
+        <svg class="w-3.5 h-3.5 inline-block opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+        </svg>
+        <span>首页</span>
+      </a>
+      <span class="opacity-40">/</span>
+      <a href="/zh/#tools-grid" class="hover:underline opacity-80 hover:opacity-100">全部工具</a>
+      <span class="opacity-40">/</span>
+      <span class="font-semibold text-brand truncate max-w-[200px] sm:max-w-xs" aria-current="page" title="在线音频波形剪切与铃声截取器 - 纯前端免上传高保真 WAV 导出">波形剪辑截取</span>
+    </nav>
     
 
     
-        <div class="max-w-7xl mx-auto">
-          <!-- Hero Banner (Mobile & Desktop Responsive) -->
-          <div class="text-center py-8 sm:py-12 md:py-16">
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs font-mono mb-4 sm:mb-5">
-              <span>纯前端免上传 Web Audio 音频处理工作室</span>
-            </div>
-            <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight mb-3 sm:mb-4">
-              AudioKit - Web Audio API & Media Studio
-            </h1>
-            <p class="max-w-2xl mx-auto text-xs sm:text-sm md:text-base opacity-75 leading-relaxed px-2">
-              实时渲染音频波形并精确截取、预估音频体积与推流带宽、麦克风拾音检测赫兹与音高、手动打拍测速节拍器。
-            </p>
-          </div>
 
-          <!-- Real-Time Interactive Filter & Search Bar -->
-          <div class="max-w-2xl mx-auto mb-8 sm:mb-12 px-2">
-            <div class="relative flex items-center">
-              <div class="absolute left-4 opacity-50 pointer-events-none">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                </svg>
-              </div>
-              <input type="text" id="tool-search" placeholder="按工具名称、长尾关键词或文件格式快速查找... (按 / 聚焦)" class="w-full pl-11 pr-20 py-3 sm:py-3.5 rounded-2xl border border-[#3b1d68] hover:border-[#c084fc] bg-black/10 dark:bg-black/30 text-xs sm:text-sm font-mono focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition">
-              <div class="absolute right-3.5 flex items-center space-x-1.5">
-                <kbd class="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono rounded border border-[#3b1d68] hover:border-[#c084fc] opacity-50 bg-black/20">Ctrl+K</kbd>
-                <button id="btn-clear-search" class="hidden text-xs opacity-60 hover:opacity-100 font-mono px-1">&times;</button>
-              </div>
-            </div>
-            <div class="flex items-center justify-between text-[11px] font-mono opacity-60 mt-2.5 px-1">
-              <span id="search-stats">显示全部 6 个开发者工具</span>
-              <span class="hidden sm:inline">100% 浏览器纯前端运算</span>
-            </div>
-          </div>
+    
+<div class="max-w-5xl mx-auto">
+  <div class="bg-[#160e2b] rounded-2xl shadow-[0_4px_25px_rgba(192,132,252,0.15)] border border-[#3b1d68] hover:border-[#c084fc] p-4 sm:p-6 md:p-8">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 sm:pb-6 border-b border-[#3b1d68]">
+      <div>
+        <div class="inline-flex items-center px-2 py-0.5 rounded text-[11px] bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs font-mono mb-2">
+          <span>WEB AUDIO DSP WAVEFORM ENGINE</span>
+        </div>
+        <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight">在线音频波形剪切与铃声截取器 - 纯前端免上传高保真 WAV 导出</h1>
+        <p class="text-xs sm:text-sm opacity-70 mt-1 max-w-2xl">拖入音频即可实时渲染高清晰度声波波形图，精确定位毫秒级起止节点，无损截取并导出为标准 WAV 音频文件，严守商业音乐与隐私。</p>
+      </div>
+    </div>
 
-          <!-- Empty State (Hidden by default) -->
-          <div id="no-tools-found" class="hidden text-center py-12 px-4 rounded-2xl border border-[#3b1d68] hover:border-[#c084fc] bg-black/5 dark:bg-white/5 mb-12">
-            <p class="text-sm font-mono opacity-75 mb-3">未找到符合条件的开发者工具，请尝试其他关键词。</p>
-            <button id="btn-reset-filter" class="px-4 py-1.5 rounded-xl text-xs font-mono font-bold border border-[#3b1d68] hover:border-[#c084fc] hover:bg-white/10 transition">
-              重置筛选
-            </button>
-          </div>
+    <!-- Drag and Drop Dropzone -->
+    <div id="drop-zone" class="mt-6 border-2 border-dashed border-[#3b1d68] hover:border-[#c084fc] hover:border-emerald-500/60 rounded-2xl p-6 sm:p-8 text-center cursor-pointer transition-colors bg-black/20">
+      <input type="file" id="inp-audio-file" accept="audio/*" class="hidden">
+      <div class="text-3xl sm:text-4xl mb-2">🎵</div>
+      <p class="text-xs sm:text-sm font-bold">点击或拖拽音频文件到此处 (.mp3, .wav, .ogg, .m4a)</p>
+      <p id="txt-file-name" class="text-[11px] opacity-60 font-mono mt-1">100% in-browser memory execution • No cloud upload</p>
+    </div>
 
-          <!-- Grid of Tools (1 col mobile, 2 cols tablet, 3 cols desktop) -->
-          <div id="tools-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-5 mb-12 sm:mb-16">
-            <a href="/zh/audio-waveform-cutter-trimmer" data-search="在线音频波形剪切与铃声截取器 - 纯前端免上传高保真 wav 导出 拖入音频即可实时渲染高清晰度声波波形图，精确定位毫秒级起止节点，无损截取并导出为标准 wav 音频文件，严守商业音乐与隐私。 音频波形剪切器 在线截取音乐片段 纯前端音频剪辑 本地wav裁剪 音频无损截取工具 audio-waveform-cutter-trimmer" class="tool-card bg-[#160e2b] rounded-xl p-5 sm:p-6 border border-[#3b1d68] hover:border-[#c084fc] shadow-[0_4px_25px_rgba(192,132,252,0.15)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">在线音频波形剪切与铃声截取器 - 纯前端免上传高保真 WAV 导出</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">拖入音频即可实时渲染高清晰度声波波形图，精确定位毫秒级起止节点，无损截取并导出为标准 WAV 音频文件，严守商业音乐与隐私。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#音频波形剪切器</span><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#在线截取音乐片段</span><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#纯前端音频剪辑</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #c084fc"><span>立即开启</span><span>&rarr;</span></div></div></a>
-<a href="/zh/audio-bitrate-file-size-calculator" data-search="音频编码码率与文件体积计算器 - 播客存储与在线推流带宽消耗测算 根据时长、采样率、编码码率(kbps)与声道设置，精确推算压缩与未压缩音频体积，为播客录制、音频托管与推流架构提供容量测算。 音频码率计算器 音频文件体积估算 mp3大小计算 播客存储空间测算 音频推流带宽计算 audio-bitrate-file-size-calculator" class="tool-card bg-[#160e2b] rounded-xl p-5 sm:p-6 border border-[#3b1d68] hover:border-[#c084fc] shadow-[0_4px_25px_rgba(192,132,252,0.15)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">音频编码码率与文件体积计算器 - 播客存储与在线推流带宽消耗测算</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">根据时长、采样率、编码码率(kbps)与声道设置，精确推算压缩与未压缩音频体积，为播客录制、音频托管与推流架构提供容量测算。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#音频码率计算器</span><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#音频文件体积估算</span><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#mp3大小计算</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #c084fc"><span>立即开启</span><span>&rarr;</span></div></div></a>
-<a href="/zh/bpm-tap-tempo-metronome" data-search="实时打拍测速 bpm 计数器与音频节拍器 - 音乐节拍与律动测速利器 跟随音乐节拍连续轻敲空格键或鼠标，毫秒级算法智能分析实时平均 bpm，内置纯正弦波音频合成节拍器，无任何时钟抖动。 tap tempo 测速 在线bpm节拍器 手动打拍测速 音乐节拍检测 网页电子节拍器 bpm-tap-tempo-metronome" class="tool-card bg-[#160e2b] rounded-xl p-5 sm:p-6 border border-[#3b1d68] hover:border-[#c084fc] shadow-[0_4px_25px_rgba(192,132,252,0.15)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">实时打拍测速 BPM 计数器与音频节拍器 - 音乐节拍与律动测速利器</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">跟随音乐节拍连续轻敲空格键或鼠标，毫秒级算法智能分析实时平均 BPM，内置纯正弦波音频合成节拍器，无任何时钟抖动。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#tap tempo 测速</span><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#在线bpm节拍器</span><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#手动打拍测速</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #c084fc"><span>立即开启</span><span>&rarr;</span></div></div></a>
-<a href="/zh/audio-frequency-hz-pitch-detector" data-search="麦克风实时音频频率与音高检测器 - 赫兹(hz)分析与乐器音准校音 通过浏览器麦克风实时采集音频，应用自相关与过零算法解析声音主频(hz)并映射对应标准乐理音名（如 a4 440hz），精准校音。 音频频率检测器 麦克风音高测试 在线校音器 声音赫兹检测 标准音440hz检测 audio-frequency-hz-pitch-detector" class="tool-card bg-[#160e2b] rounded-xl p-5 sm:p-6 border border-[#3b1d68] hover:border-[#c084fc] shadow-[0_4px_25px_rgba(192,132,252,0.15)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">麦克风实时音频频率与音高检测器 - 赫兹(Hz)分析与乐器音准校音</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">通过浏览器麦克风实时采集音频，应用自相关与过零算法解析声音主频(Hz)并映射对应标准乐理音名（如 A4 440Hz），精准校音。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#音频频率检测器</span><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#麦克风音高测试</span><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#在线校音器</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #c084fc"><span>立即开启</span><span>&rarr;</span></div></div></a>
-<a href="/zh/audio-volume-normalizer-gain" data-search="音频音量增益与峰值均衡器 - 纯前端分贝(db)无损响度调节 上传录音或音轨，纯本地动态增益衰减调节分贝，一键将音频峰值响度推至 0 dbfs 极限且不发生爆音失真。 音频音量均衡器 在线提升音频分贝 峰值音频归一化 录音声音太小放大 防止音频爆音失真 audio-volume-normalizer-gain" class="tool-card bg-[#160e2b] rounded-xl p-5 sm:p-6 border border-[#3b1d68] hover:border-[#c084fc] shadow-[0_4px_25px_rgba(192,132,252,0.15)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">音频音量增益与峰值均衡器 - 纯前端分贝(dB)无损响度调节</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">上传录音或音轨，纯本地动态增益衰减调节分贝，一键将音频峰值响度推至 0 dBFS 极限且不发生爆音失真。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#音频音量均衡器</span><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#在线提升音频分贝</span><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#峰值音频归一化</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #c084fc"><span>立即开启</span><span>&rarr;</span></div></div></a>
-<a href="/zh/audio-format-mime-inspector" data-search="音频格式与文件头信息查看器 - 采样率与编码元数据参数诊断 本地读取音频文件容器头部二进制字节，迅速解析文件真实 mime 媒体类型、采样率及通道参数，排查播放兼容性。 音频参数查看器 检测音频采样率 查看音频mime格式 音频文件头分析 排查音频格式兼容 audio-format-mime-inspector" class="tool-card bg-[#160e2b] rounded-xl p-5 sm:p-6 border border-[#3b1d68] hover:border-[#c084fc] shadow-[0_4px_25px_rgba(192,132,252,0.15)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% 本地运算</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">音频格式与文件头信息查看器 - 采样率与编码元数据参数诊断</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">本地读取音频文件容器头部二进制字节，迅速解析文件真实 MIME 媒体类型、采样率及通道参数，排查播放兼容性。</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#音频参数查看器</span><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#检测音频采样率</span><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#查看音频mime格式</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #c084fc"><span>立即开启</span><span>&rarr;</span></div></div></a>
+    <!-- Canvas Waveform Visualizer -->
+    <div class="mt-6 space-y-3">
+      <div class="relative w-full h-32 sm:h-40 rounded-xl overflow-hidden bg-black/40 border border-[#3b1d68] hover:border-[#c084fc]">
+        <canvas id="cvs-wave" width="1000" height="200" class="w-full h-full block"></canvas>
+        <div id="marker-start" class="absolute top-0 bottom-0 w-1 bg-emerald-400 cursor-ew-resize hidden" style="left: 10%;"></div>
+        <div id="marker-end" class="absolute top-0 bottom-0 w-1 bg-sky-400 cursor-ew-resize hidden" style="left: 60%;"></div>
+      </div>
+
+      <!-- Controls -->
+      <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+        <div class="flex items-center space-x-2">
+          <button id="btn-play-selection" disabled class="px-4 py-2 rounded-xl text-xs font-bold transition border border-[#3b1d68] hover:border-[#c084fc] bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 disabled:opacity-30">
+            ▶ 试听选区
+          </button>
+          <button id="btn-stop-audio" disabled class="px-4 py-2 rounded-xl text-xs font-bold transition border border-[#3b1d68] hover:border-[#c084fc] bg-black/20 hover:bg-white/10 disabled:opacity-30">
+            ⏹ 停止播放
+          </button>
+        </div>
+        <button id="btn-dl-wav" disabled class="px-4 py-2 rounded-xl text-xs font-bold transition border border-[#3b1d68] hover:border-[#c084fc] bg-emerald-500 hover:bg-emerald-600 text-black disabled:opacity-30">
+          ⬇ 导出下载剪辑 WAV (纯本地零上传)
+        </button>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2">
+        <div class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-black/15">
+          <span class="text-[10px] font-mono opacity-60 block">起点标记 (秒)</span>
+          <span id="txt-start-val" class="text-xs font-bold font-mono text-emerald-400">0.00 s</span>
+        </div>
+        <div class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-black/15">
+          <span class="text-[10px] font-mono opacity-60 block">终点标记 (秒)</span>
+          <span id="txt-end-val" class="text-xs font-bold font-mono text-sky-400">0.00 s</span>
+        </div>
+        <div class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-black/15">
+          <span class="text-[10px] font-mono opacity-60 block">总时长 (秒)</span>
+          <span id="txt-dur-val" class="text-xs font-bold font-mono text-white">0.00 s</span>
+        </div>
+        <div class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-black/15">
+          <span class="text-[10px] font-mono opacity-60 block">采样率 (Hz)</span>
+          <span id="txt-sr-val" class="text-xs font-bold font-mono text-amber-300">-- Hz</span>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- SEO & Capabilities Section -->
+    <div class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-[#3b1d68] grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+      <div>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">关于 在线音频波形剪切与铃声截取器 - 纯前端免上传高保真 WAV 导出</h2>
+        <p class="text-xs opacity-75 leading-relaxed">
+          在线零延迟 <strong>音频波形剪切器</strong> 纯前端音频处理利器。完全基于 HTML5 Web Audio API 本地离线解码与波形合成，零上传保护音乐版权。
+        </p>
+        <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">支持的音频工具与核心算法</h3>
+        <ul class="space-y-0.5"><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#c084fc'>+</span>音频波形剪切器</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#c084fc'>+</span>在线截取音乐片段</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#c084fc'>+</span>纯前端音频剪辑</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#c084fc'>+</span>本地wav裁剪</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#c084fc'>+</span>音频无损截取工具</li></ul>
+      </div>
+      <div>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">架构特性与隐私保障</h2>
+        <div class="space-y-2.5">
+          <div class="p-3 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-white/5">
+            <h4 class="text-xs font-bold text-emerald-400 mb-0.5">100% 录音与音频纯本地隐私</h4>
+            <p class="text-[11px] opacity-70">您的私人录音、播客素材和音乐工程绝不上传至任何云端服务器，完全离线运行。</p>
+          </div>
+          <div class="p-3 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-white/5">
+            <h4 class="text-xs font-bold text-sky-400 mb-0.5">硬件加速 Web Audio 引擎</h4>
+            <p class="text-[11px] opacity-70">利用浏览器原生底层 C++ DSP 音频解码器与 60 帧 Canvas 实时波形渲染。</p>
           </div>
         </div>
+        <p class="text-[10px] opacity-60 mt-3 italic">⚠️ 免责声明：所有音频波形处理与格式剪裁均在您本地设备内存中实时运算，绝无云端文件留存。</p>
+      </div>
+    </div>
+        
+  </div>
+</div>
 
-        <script>
-        (function() {
-          const searchInput = document.getElementById('tool-search');
-          const clearBtn = document.getElementById('btn-clear-search');
-          const resetBtn = document.getElementById('btn-reset-filter');
-          const emptyState = document.getElementById('no-tools-found');
-          const cards = Array.from(document.querySelectorAll('.tool-card'));
-          const statsEl = document.getElementById('search-stats');
-          const totalCards = cards.length;
+<script>
+(function() {
+  const dropZone = document.getElementById('drop-zone');
+  const inpFile = document.getElementById('inp-audio-file');
+  const txtFile = document.getElementById('txt-file-name');
+  const cvs = document.getElementById('cvs-wave');
+  const ctx = cvs.getContext('2d');
+  const mStart = document.getElementById('marker-start');
+  const mEnd = document.getElementById('marker-end');
+  const btnPlay = document.getElementById('btn-play-selection');
+  const btnStop = document.getElementById('btn-stop-audio');
+  const btnDl = document.getElementById('btn-dl-wav');
+  const txtStart = document.getElementById('txt-start-val');
+  const txtEnd = document.getElementById('txt-end-val');
+  const txtDur = document.getElementById('txt-dur-val');
+  const txtSr = document.getElementById('txt-sr-val');
 
-          function filterCards() {
-            const query = searchInput.value.trim().toLowerCase();
-            clearBtn.classList.toggle('hidden', !query);
+  let audioCtx = null;
+  let audioBuffer = null;
+  let currentSource = null;
+  let startSec = 0;
+  let endSec = 0;
 
-            let visibleCount = 0;
-            cards.forEach(card => {
-              const corpus = card.getAttribute('data-search') || '';
-              const matches = !query || corpus.includes(query);
-              card.style.display = matches ? '' : 'none';
-              if (matches) visibleCount++;
-            });
+  dropZone.addEventListener('click', () => inpFile.click());
+  inpFile.addEventListener('change', (e) => {
+    if (e.target.files && e.target.files[0]) handleFile(e.target.files[0]);
+  });
 
-            if (statsEl) {
-              statsEl.innerText = query ? ('已匹配 __N__ / __TOTAL__ 个工具'.replace('__N__', visibleCount).replace('__TOTAL__', totalCards)) : ('显示全部 __N__ 个开发者工具'.replace('__N__', totalCards));
-            }
+  dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('border-emerald-500'); });
+  dropZone.addEventListener('dragleave', () => dropZone.classList.remove('border-emerald-500'));
+  dropZone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropZone.classList.remove('border-emerald-500');
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);
+  });
 
-            if (emptyState) {
-              emptyState.classList.toggle('hidden', visibleCount > 0);
-            }
-          }
+  function handleFile(file) {
+    txtFile.textContent = file.name + ' (' + (file.size / 1024 / 1024).toFixed(2) + ' MB)';
+    const reader = new FileReader();
+    reader.onload = function(ev) {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      audioCtx.decodeAudioData(ev.target.result, function(buffer) {
+        audioBuffer = buffer;
+        startSec = 0;
+        endSec = buffer.duration;
+        txtSr.textContent = buffer.sampleRate + ' Hz';
+        txtDur.textContent = buffer.duration.toFixed(2) + ' s';
+        txtStart.textContent = '0.00 s';
+        txtEnd.textContent = buffer.duration.toFixed(2) + ' s';
+        btnPlay.disabled = false;
+        btnStop.disabled = false;
+        btnDl.disabled = false;
+        mStart.classList.remove('hidden');
+        mEnd.classList.remove('hidden');
+        drawWaveform(buffer);
+      });
+    };
+    reader.readAsArrayBuffer(file);
+  }
 
-          if (searchInput) {
-            searchInput.addEventListener('input', filterCards);
+  function drawWaveform(buffer) {
+    const data = buffer.getChannelData(0);
+    const width = cvs.width;
+    const height = cvs.height;
+    ctx.clearRect(0, 0, width, height);
 
-            document.addEventListener('keydown', e => {
-              const isSearchKey = (e.key === '/' && document.activeElement !== searchInput && document.activeElement.tagName !== 'TEXTAREA' && document.activeElement.tagName !== 'INPUT') ||
-                                  (e.key.toLowerCase() === 'k' && (e.ctrlKey || e.metaKey));
-              if (isSearchKey) {
-                e.preventDefault();
-                searchInput.focus();
-                searchInput.select();
-              }
-              if (e.key === 'Escape' && document.activeElement === searchInput) {
-                searchInput.value = '';
-                filterCards();
-                searchInput.blur();
-              }
-            });
-          }
+    ctx.fillStyle = '#064e3b';
+    ctx.fillRect(0, 0, width, height);
 
-          if (clearBtn) {
-            clearBtn.addEventListener('click', () => {
-              searchInput.value = '';
-              filterCards();
-              searchInput.focus();
-            });
-          }
+    ctx.strokeStyle = '#10b981';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
 
-          if (resetBtn) {
-            resetBtn.addEventListener('click', () => {
-              searchInput.value = '';
-              filterCards();
-            });
-          }
-        })();
-        </script>
+    const step = Math.ceil(data.length / width);
+    const amp = height / 2;
+    for (let i = 0; i < width; i++) {
+      let min = 1.0;
+      let max = -1.0;
+      for (let j = 0; j < step; j++) {
+        const datum = data[i * step + j];
+        if (datum < min) min = datum;
+        if (datum > max) max = datum;
+      }
+      ctx.moveTo(i, (1 + min) * amp);
+      ctx.lineTo(i, (1 + max) * amp);
+    }
+    ctx.stroke();
+  }
+
+  btnPlay.addEventListener('click', () => {
+    if (!audioBuffer) return;
+    if (currentSource) currentSource.stop();
+    currentSource = audioCtx.createBufferSource();
+    currentSource.buffer = audioBuffer;
+    currentSource.connect(audioCtx.destination);
+    const duration = Math.max(0.1, endSec - startSec);
+    currentSource.start(0, startSec, duration);
+  });
+
+  btnStop.addEventListener('click', () => {
+    if (currentSource) { currentSource.stop(); currentSource = null; }
+  });
+
+  btnDl.addEventListener('click', () => {
+    if (!audioBuffer) return;
+    const cutDuration = Math.max(0.1, endSec - startSec);
+    const rate = audioBuffer.sampleRate;
+    const cutSamples = Math.floor(cutDuration * rate);
+    const startOffset = Math.floor(startSec * rate);
+    const channels = audioBuffer.numberOfChannels;
+
+    // Build raw WAV in client memory
+    const buffer = new ArrayBuffer(44 + cutSamples * channels * 2);
+    const view = new DataView(buffer);
+
+    function writeString(offset, string) {
+      for (let i = 0; i < string.length; i++) view.setUint8(offset + i, string.charCodeAt(i));
+    }
+
+    writeString(0, 'RIFF');
+    view.setUint32(4, 36 + cutSamples * channels * 2, true);
+    writeString(8, 'WAVE');
+    writeString(12, 'fmt ');
+    view.setUint32(16, 16, true);
+    view.setUint16(20, 1, true); // PCM
+    view.setUint16(22, channels, true);
+    view.setUint32(24, rate, true);
+    view.setUint32(28, rate * channels * 2, true);
+    view.setUint16(32, channels * 2, true);
+    view.setUint16(34, 16, true);
+    writeString(36, 'data');
+    view.setUint32(40, cutSamples * channels * 2, true);
+
+    let offset = 44;
+    for (let i = 0; i < cutSamples; i++) {
+      for (let ch = 0; ch < channels; ch++) {
+        const sample = Math.max(-1, Math.min(1, audioBuffer.getChannelData(ch)[startOffset + i] || 0));
+        view.setInt16(offset, sample < 0 ? sample * 0x8000 : sample * 0x7FFF, true);
+        offset += 2;
+      }
+    }
+
+    const blob = new Blob([view], { type: 'audio/wav' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'trimmed_audio.wav';
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+})();
+</script>
         
 
     
@@ -740,43 +912,43 @@
 
       <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2.5">
         
-        <a href="/" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
+        <a href="/audio-waveform-cutter-trimmer" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
           <div class="text-xl mb-1">[EN]</div>
           <div class="text-xs font-bold truncate group-hover:underline">English</div>
           <div class="text-[10px] opacity-50 font-mono mt-1">6 全部工具</div>
         </a>
         
-        <a href="/zh/" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ring-2 ring-[#10b981]/50">
+        <a href="/zh/audio-waveform-cutter-trimmer" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ring-2 ring-[#10b981]/50">
           <div class="text-xl mb-1">[ZH]</div>
           <div class="text-xs font-bold truncate group-hover:underline">简体中文</div>
           <div class="text-[10px] opacity-50 font-mono mt-1">6 全部工具</div>
         </a>
         
-        <a href="/es/" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
+        <a href="/es/audio-waveform-cutter-trimmer" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
           <div class="text-xl mb-1">[ES]</div>
           <div class="text-xs font-bold truncate group-hover:underline">Español</div>
           <div class="text-[10px] opacity-50 font-mono mt-1">6 全部工具</div>
         </a>
         
-        <a href="/pt/" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
+        <a href="/pt/audio-waveform-cutter-trimmer" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
           <div class="text-xl mb-1">[PT]</div>
           <div class="text-xs font-bold truncate group-hover:underline">Português</div>
           <div class="text-[10px] opacity-50 font-mono mt-1">6 全部工具</div>
         </a>
         
-        <a href="/de/" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
+        <a href="/de/audio-waveform-cutter-trimmer" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
           <div class="text-xl mb-1">[DE]</div>
           <div class="text-xs font-bold truncate group-hover:underline">Deutsch</div>
           <div class="text-[10px] opacity-50 font-mono mt-1">6 全部工具</div>
         </a>
         
-        <a href="/fr/" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
+        <a href="/fr/audio-waveform-cutter-trimmer" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
           <div class="text-xl mb-1">[FR]</div>
           <div class="text-xs font-bold truncate group-hover:underline">Français</div>
           <div class="text-[10px] opacity-50 font-mono mt-1">6 全部工具</div>
         </a>
         
-        <a href="/ja/" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
+        <a href="/ja/audio-waveform-cutter-trimmer" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
           <div class="text-xl mb-1">[JA]</div>
           <div class="text-xs font-bold truncate group-hover:underline">日本語</div>
           <div class="text-[10px] opacity-50 font-mono mt-1">6 全部工具</div>
@@ -807,7 +979,7 @@
             AudioKit - Web Audio API & Media Studio
           </div>
           <p class="text-[11px] opacity-70 leading-relaxed max-w-xs">
-            实时渲染音频波形并精确截取、预估音频体积与推流带宽、麦克风拾音检测赫兹与音高、手动打拍测速节拍器。
+            拖入音频即可实时渲染高清晰度声波波形图，精确定位毫秒级起止节点，无损截取并导出为标准 WAV 音频文件，严守商业音乐与隐私。
           </p>
           <div class="p-2.5 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-white/5 font-mono text-[11px] text-[#10b981]">
             🔒 100% 浏览器本地沙箱运行：零服务器存储，零数据上传，绝不搜集任何隐私。
@@ -861,37 +1033,37 @@
           </h4>
           <div class="grid grid-cols-2 gap-1.5 font-mono text-[11px]">
             
-            <a href="/" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+            <a href="/audio-waveform-cutter-trimmer" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
               <span>[EN]</span>
               <span>English</span>
             </a>
             
-            <a href="/zh/" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+            <a href="/zh/audio-waveform-cutter-trimmer" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
               <span>[ZH]</span>
               <span>简体中文</span>
             </a>
             
-            <a href="/es/" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+            <a href="/es/audio-waveform-cutter-trimmer" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
               <span>[ES]</span>
               <span>Español</span>
             </a>
             
-            <a href="/pt/" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+            <a href="/pt/audio-waveform-cutter-trimmer" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
               <span>[PT]</span>
               <span>Português</span>
             </a>
             
-            <a href="/de/" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+            <a href="/de/audio-waveform-cutter-trimmer" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
               <span>[DE]</span>
               <span>Deutsch</span>
             </a>
             
-            <a href="/fr/" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+            <a href="/fr/audio-waveform-cutter-trimmer" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
               <span>[FR]</span>
               <span>Français</span>
             </a>
             
-            <a href="/ja/" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+            <a href="/ja/audio-waveform-cutter-trimmer" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
               <span>[JA]</span>
               <span>日本語</span>
             </a>

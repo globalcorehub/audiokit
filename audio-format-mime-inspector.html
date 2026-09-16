@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-<html lang="de" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AudioKit - Web Audio API & Media Studio - Web-Audio-Studio für private Audiobearbeitung</title>
-  <meta name="description" content="Wellenformen millimetergenau schneiden, Dateigrößen berechnen, Tonhöhen ermitteln und BPM tappen.">
-  <link rel="canonical" href="https://audiokit.globalcorehub.com/de/">
+  <title>Audio Format & MIME Header Inspector - Technical Spec Analyzer | AudioKit - Web Audio API & Media Studio</title>
+  <meta name="description" content="Inspect audio container headers, MIME types, duration, sample rate, and channel encoding instantly in your browser.">
+  <link rel="canonical" href="https://audiokit.globalcorehub.com/audio-format-mime-inspector">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://audiokit.globalcorehub.com/sitemap.xml">
 
   <!-- Dynamic Zero-Latency SVG Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2310b981'/><text y='70' x='18' font-size='65' font-family='monospace' font-weight='bold' fill='%230c0e14'>&gt;_</text></svg>">
 
   <!-- International SEO hreflang tags (7 Languages) -->
-  <link rel="alternate" hreflang="en" href="https://audiokit.globalcorehub.com/" />
-  <link rel="alternate" hreflang="zh-CN" href="https://audiokit.globalcorehub.com/zh" />
-  <link rel="alternate" hreflang="zh" href="https://audiokit.globalcorehub.com/zh" />
-  <link rel="alternate" hreflang="es" href="https://audiokit.globalcorehub.com/es" />
-  <link rel="alternate" hreflang="pt" href="https://audiokit.globalcorehub.com/pt" />
-  <link rel="alternate" hreflang="de" href="https://audiokit.globalcorehub.com/de" />
-  <link rel="alternate" hreflang="fr" href="https://audiokit.globalcorehub.com/fr" />
-  <link rel="alternate" hreflang="ja" href="https://audiokit.globalcorehub.com/ja" />
-  <link rel="alternate" hreflang="x-default" href="https://audiokit.globalcorehub.com/" />
+  <link rel="alternate" hreflang="en" href="https://audiokit.globalcorehub.com/audio-format-mime-inspector" />
+  <link rel="alternate" hreflang="zh-CN" href="https://audiokit.globalcorehub.com/zh/audio-format-mime-inspector" />
+  <link rel="alternate" hreflang="zh" href="https://audiokit.globalcorehub.com/zh/audio-format-mime-inspector" />
+  <link rel="alternate" hreflang="es" href="https://audiokit.globalcorehub.com/es/audio-format-mime-inspector" />
+  <link rel="alternate" hreflang="pt" href="https://audiokit.globalcorehub.com/pt/audio-format-mime-inspector" />
+  <link rel="alternate" hreflang="de" href="https://audiokit.globalcorehub.com/de/audio-format-mime-inspector" />
+  <link rel="alternate" hreflang="fr" href="https://audiokit.globalcorehub.com/fr/audio-format-mime-inspector" />
+  <link rel="alternate" hreflang="ja" href="https://audiokit.globalcorehub.com/ja/audio-format-mime-inspector" />
+  <link rel="alternate" hreflang="x-default" href="https://audiokit.globalcorehub.com/audio-format-mime-inspector" />
 
   <!-- Open Graph & Social Cards -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://audiokit.globalcorehub.com/de/">
-  <meta property="og:title" content="AudioKit - Web Audio API & Media Studio - Web-Audio-Studio für private Audiobearbeitung">
-  <meta property="og:description" content="Wellenformen millimetergenau schneiden, Dateigrößen berechnen, Tonhöhen ermitteln und BPM tappen.">
+  <meta property="og:url" content="https://audiokit.globalcorehub.com/audio-format-mime-inspector">
+  <meta property="og:title" content="Audio Format & MIME Header Inspector - Technical Spec Analyzer | AudioKit - Web Audio API & Media Studio">
+  <meta property="og:description" content="Inspect audio container headers, MIME types, duration, sample rate, and channel encoding instantly in your browser.">
   <meta property="og:site_name" content="AudioKit - Web Audio API & Media Studio">
-  <meta property="og:locale" content="de_DE">
+  <meta property="og:locale" content="en_US">
   <meta property="og:image" content="https://audiokit.globalcorehub.com/og-image.svg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -36,8 +36,8 @@
 
   <!-- Twitter Social Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AudioKit - Web Audio API & Media Studio - Web-Audio-Studio für private Audiobearbeitung">
-  <meta name="twitter:description" content="Wellenformen millimetergenau schneiden, Dateigrößen berechnen, Tonhöhen ermitteln und BPM tappen.">
+  <meta name="twitter:title" content="Audio Format & MIME Header Inspector - Technical Spec Analyzer | AudioKit - Web Audio API & Media Studio">
+  <meta name="twitter:description" content="Inspect audio container headers, MIME types, duration, sample rate, and channel encoding instantly in your browser.">
   <meta name="twitter:image" content="https://audiokit.globalcorehub.com/og-image.svg">
 
   <!-- Multi-Theme Typography Imports (JetBrains Mono, Plus Jakarta Sans, Space Grotesk) -->
@@ -189,19 +189,51 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "AudioKit - Web Audio API & Media Studio - Web-Audio-Studio für private Audiobearbeitung",
-    "url": "https://audiokit.globalcorehub.com/de/",
-    "description": "Wellenformen millimetergenau schneiden, Dateigrößen berechnen, Tonhöhen ermitteln und BPM tappen.",
+    "name": "Audio Format & MIME Header Inspector - Technical Spec Analyzer",
+    "url": "https://audiokit.globalcorehub.com/audio-format-mime-inspector",
+    "description": "Inspect audio container headers, MIME types, duration, sample rate, and channel encoding instantly in your browser.",
     "applicationCategory": "MultimediaApplication",
     "operatingSystem": "All",
     "offers": {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD"
+    },
+    "potentialAction": {
+      "@type": "ConsumeAction",
+      "target": "https://audiokit.globalcorehub.com/audio-format-mime-inspector"
     }
   }
   </script>
   
+  
+  <!-- BreadcrumbList Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://audiokit.globalcorehub.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "All Tools",
+        "item": "https://audiokit.globalcorehub.com/#tools-grid"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Audio Format & MIME Header Inspector - Technical Spec Analyzer",
+        "item": "https://audiokit.globalcorehub.com/audio-format-mime-inspector"
+      }
+    ]
+  }
+  </script>
   
 
   <!-- Tech Stack Scripts (Alpine.js / Canvas loop / Terminal runtime) -->
@@ -232,7 +264,7 @@
       <div class="flex items-center space-x-2 sm:space-x-3">
         
 
-        <a href="/de/" class="flex items-center space-x-2.5 sm:space-x-3 group">
+        <a href="/" class="flex items-center space-x-2.5 sm:space-x-3 group">
           <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center font-black text-base sm:text-lg bg-[#c084fc] hover:bg-[#a855f7] text-[#0b0716] font-extrabold shadow-[0_0_20px_rgba(192,132,252,0.4)]">
             A
           </div>
@@ -244,12 +276,12 @@
 
       <!-- Desktop Navigation Links (Clean Dropdown Architecture) -->
       <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-xs lg:text-sm font-medium">
-        <a href="/de/" class="px-2.5 py-1.5 rounded-lg hover:bg-white/5 transition opacity-90 whitespace-nowrap">Startseite</a>
+        <a href="/" class="px-2.5 py-1.5 rounded-lg hover:bg-white/5 transition opacity-90 whitespace-nowrap">Home</a>
 
         <!-- "All Tools" Structured Dropdown Menu -->
         <div class="relative inline-block text-left" id="tools-dropdown-container">
           <button id="tools-dropdown-btn" type="button" class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg hover:bg-white/10 transition opacity-80 hover:opacity-100 font-medium">
-            <span>Alle Werkzeuge</span>
+            <span>All Tools</span>
             <svg id="tools-arrow-icon" class="w-3.5 h-3.5 opacity-60 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
@@ -258,106 +290,106 @@
           <!-- Dropdown Panel (Categorized & Compact) -->
           <div id="tools-dropdown-panel" class="hidden absolute left-0 mt-1.5 w-72 sm:w-80 rounded-2xl bg-[#160e2b] border border-[#3b1d68] hover:border-[#c084fc] shadow-[0_4px_25px_rgba(192,132,252,0.15)] shadow-2xl z-50 p-2 font-mono text-xs backdrop-blur-xl">
             <div class="flex items-center justify-between px-2.5 py-1 text-[10px] uppercase tracking-wider opacity-50 border-b border-white/10 mb-1">
-              <span>Entwickler-Werkzeuge Index</span>
-              <span>6 Alle Werkzeuge</span>
+              <span>Developer Tools Index</span>
+              <span>6 All Tools</span>
             </div>
             <div class="max-h-72 overflow-y-auto space-y-0.5">
               
-              <a href="/de/audio-waveform-cutter-trimmer" title="Audio-Cutter & Wellenform-Schneider - Privates Schneiden ohne Upload" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
+              <a href="/audio-waveform-cutter-trimmer" title="Audio Waveform Cutter & Trimmer - 100% Client-Side Private Audio Slicer" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
                 <div class="truncate mr-2">
-                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">Wellenform-Cutter</div>
-                  <div class="text-[10px] opacity-50 truncate">Schneiden Sie Audiodateien direkt im Browser mit optischer Wellenform-Darstellung und sofortigem WAV-Export ohne Daten-Upload.</div>
+                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">Waveform Cutter</div>
+                  <div class="text-[10px] opacity-50 truncate">Cut, trim, and slice audio files directly in your browser. Visualizes audio waveforms in real-time with zero server uploads and instant WAV export.</div>
                 </div>
                 <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
               </a>
               
-              <a href="/de/audio-bitrate-file-size-calculator" title="Audio-Bitrate & Dateigrößen-Rechner - Bandbreiten- & Speicherbedarf" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
+              <a href="/audio-bitrate-file-size-calculator" title="Audio Bitrate & File Size Calculator - Streaming Bandwidth & Storage Estimator" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
                 <div class="truncate mr-2">
-                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">Bitraten-Rechner</div>
-                  <div class="text-[10px] opacity-50 truncate">Berechnen Sie die Speichergröße von Audiodateien und den Bandbreitenverbrauch für Podcasts und Audio-Streaming.</div>
+                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">Bitrate & Size</div>
+                  <div class="text-[10px] opacity-50 truncate">Calculate expected audio file sizes across MP3, AAC, and uncompressed WAV formats based on duration, bitrate (kbps), and channels.</div>
                 </div>
                 <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
               </a>
               
-              <a href="/de/bpm-tap-tempo-metronome" title="Tap Tempo BPM Zähler & Web Audio Metronom - Interaktiver Taktgeber" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
+              <a href="/bpm-tap-tempo-metronome" title="Tap Tempo BPM Counter & Web Audio Metronome - Live Beat Detector" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
                 <div class="truncate mr-2">
-                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">Tap Tempo Metronom</div>
-                  <div class="text-[10px] opacity-50 truncate">Ermitteln Sie die Geschwindigkeit jedes Musikstücks durch rhythmischen Tastendruck und nutzen Sie das integrierte Metronom.</div>
+                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">Tap Tempo & BPM</div>
+                  <div class="text-[10px] opacity-50 truncate">Detect musical tempo by tapping keys or clicking rhythmically. Built-in Web Audio synthesis generates precise clicks with zero timing jitter.</div>
                 </div>
                 <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
               </a>
               
-              <a href="/de/audio-frequency-hz-pitch-detector" title="Mikrofon-Tonhöhen- & Hz-Frequenz-Analysator - Echtzeit-Stimmgerät" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
+              <a href="/audio-frequency-hz-pitch-detector" title="Microphone Audio Pitch & Hz Frequency Detector - Real-Time Tuner" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
                 <div class="truncate mr-2">
-                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">Tonhöhe & Frequenz</div>
-                  <div class="text-[10px] opacity-50 truncate">Erfassen Sie die exakte Tonfrequenz in Hertz und den entsprechenden Musikton direkt über Ihr Mikrofon.</div>
+                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">Pitch & Frequency</div>
+                  <div class="text-[10px] opacity-50 truncate">Use your microphone to detect the exact frequency in Hertz (Hz) and musical pitch note. 100% in-browser Web Audio DSP analyzer.</div>
                 </div>
                 <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
               </a>
               
-              <a href="/de/audio-volume-normalizer-gain" title="Audio-Lautstärke-Normalisierer & Gain-Verstärker (dBFS)" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
+              <a href="/audio-volume-normalizer-gain" title="Audio Volume Normalizer & Gain Booster - Peak dB Normalization Tool" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
                 <div class="truncate mr-2">
-                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">Lautstärke-Normalisierer</div>
-                  <div class="text-[10px] opacity-50 truncate">Normalisieren Sie den Spitzenpegel Ihrer Audiodateien und passen Sie die Lautstärke in Dezibel verzerrungsfrei an.</div>
+                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">Volume Normalizer</div>
+                  <div class="text-[10px] opacity-50 truncate">Normalize peak audio levels and boost or attenuate gain in decibels (dB). Prevents digital clipping using Web Audio gain dynamics.</div>
                 </div>
                 <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
               </a>
               
-              <a href="/de/audio-format-mime-inspector" title="Audiodatei-Header & MIME-Inspektor - Technische Audio-Analyse" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
+              <a href="/audio-format-mime-inspector" title="Audio Format & MIME Header Inspector - Technical Spec Analyzer" class="flex items-center justify-between px-2.5 py-2 rounded-xl hover:bg-white/10 transition group/item">
                 <div class="truncate mr-2">
-                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">Audio-Inspektor</div>
-                  <div class="text-[10px] opacity-50 truncate">Überprüfen Sie Audio-Container, MIME-Typen, Abtastraten und Kanalkonfigurationen ohne Datenübertragung.</div>
+                  <div class="font-bold text-xs group-hover/item:text-brand transition truncate">Audio Inspector</div>
+                  <div class="text-[10px] opacity-50 truncate">Inspect audio container headers, MIME types, duration, sample rate, and channel encoding instantly in your browser.</div>
                 </div>
                 <span class="text-[10px] opacity-30 font-mono group-hover/item:opacity-80 transition">&rarr;</span>
               </a>
               
             </div>
             <div class="mt-1.5 pt-1.5 border-t border-white/10 px-2 flex items-center justify-between">
-              <a href="/de/#tools-grid" class="text-[11px] font-bold hover:underline flex items-center space-x-1" style="color: #c084fc">
-                <span>Gesamtes Verzeichnis</span>
+              <a href="/#tools-grid" class="text-[11px] font-bold hover:underline flex items-center space-x-1" style="color: #c084fc">
+                <span>Browse All</span>
                 <span>&rarr;</span>
               </a>
-              <span class="text-[10px] opacity-40 font-mono">100% Client-seitig</span>
+              <span class="text-[10px] opacity-40 font-mono">100% Client-Side</span>
             </div>
           </div>
         </div>
 
         <!-- At most 2 quick shortcut links for high-frequency tools on large screens -->
         
-        <a href="/de/audio-waveform-cutter-trimmer" title="Audio-Cutter & Wellenform-Schneider - Privates Schneiden ohne Upload" class="hidden xl:inline-block px-2.5 py-1.5 rounded-lg hover:bg-white/5 transition opacity-70 hover:opacity-100 whitespace-nowrap">Wellenform-Cutter</a>
+        <a href="/audio-waveform-cutter-trimmer" title="Audio Waveform Cutter & Trimmer - 100% Client-Side Private Audio Slicer" class="hidden xl:inline-block px-2.5 py-1.5 rounded-lg hover:bg-white/5 transition opacity-70 hover:opacity-100 whitespace-nowrap">Waveform Cutter</a>
         
-        <a href="/de/audio-bitrate-file-size-calculator" title="Audio-Bitrate & Dateigrößen-Rechner - Bandbreiten- & Speicherbedarf" class="hidden xl:inline-block px-2.5 py-1.5 rounded-lg hover:bg-white/5 transition opacity-70 hover:opacity-100 whitespace-nowrap">Bitraten-Rechner</a>
+        <a href="/audio-bitrate-file-size-calculator" title="Audio Bitrate & File Size Calculator - Streaming Bandwidth & Storage Estimator" class="hidden xl:inline-block px-2.5 py-1.5 rounded-lg hover:bg-white/5 transition opacity-70 hover:opacity-100 whitespace-nowrap">Bitrate & Size</a>
         
       </nav>
 
       <!-- Action Items & Language Selector & Quick Search & Mobile Hamburger -->
       <div class="flex items-center space-x-2 sm:space-x-3">
         <!-- Quick Search Trigger in Header -->
-        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="Werkzeuge nach Stichwort, Format oder Einsatzzweck filtern... (Taste / drücken)">
+        <button id="global-search-btn" type="button" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-black/15 hover:bg-black/30 text-xs font-mono opacity-80 hover:opacity-100 transition" title="Search tools by keyword, format... (Press / to focus)">
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
-          <span class="hidden sm:inline opacity-70">Suchen</span>
+          <span class="hidden sm:inline opacity-70">Search</span>
           <kbd class="hidden sm:inline text-[9px] px-1 py-0.5 rounded border border-[#3b1d68] hover:border-[#c084fc] opacity-50 bg-black/20 font-mono">Ctrl+K</kbd>
         </button>
 
         <!-- Interactive Multi-Theme Selector Dropdown -->
         <div class="relative inline-block text-left" id="theme-selector-container">
-          <button id="theme-toggle-btn" type="button" class="inline-flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg text-xs font-mono border border-[#3b1d68] hover:border-[#c084fc] hover:opacity-90 transition bg-black/20" title="Design-Stil">
+          <button id="theme-toggle-btn" type="button" class="inline-flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg text-xs font-mono border border-[#3b1d68] hover:border-[#c084fc] hover:opacity-90 transition bg-black/20" title="Theme Style">
             <span id="theme-current-icon" class="text-sm leading-none">🖤</span>
-            <span id="theme-current-name" class="hidden xl:inline text-xs font-medium">Terminal Schwarz</span>
+            <span id="theme-current-name" class="hidden xl:inline text-xs font-medium">Terminal Black</span>
             <svg class="w-3 h-3 opacity-60 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
           <div id="theme-dropdown-menu" class="hidden absolute right-0 mt-2 w-48 rounded-xl bg-[#160e2b] border border-[#3b1d68] hover:border-[#c084fc] shadow-[0_4px_25px_rgba(192,132,252,0.15)] z-50 py-1.5 font-mono text-xs shadow-2xl backdrop-blur-xl">
             <div class="px-3 py-1 text-[10px] uppercase tracking-wider opacity-50 border-b border-white/10 mb-1">
-              Design-Stil
+              Theme Style
             </div>
             <button type="button" onclick="window.switchTheme('terminal_dev', true)" data-theme-opt="terminal_dev" class="w-full flex items-center justify-between px-3 py-2 hover:bg-white/10 transition text-left group">
               <div class="flex items-center space-x-2">
                 <span class="w-3 h-3 rounded-full bg-[#10b981] inline-block shadow-[0_0_6px_#10b981]"></span>
-                <span class="font-medium group-hover:text-emerald-400 transition">Terminal Schwarz</span>
+                <span class="font-medium group-hover:text-emerald-400 transition">Terminal Black</span>
               </div>
               <span class="theme-check text-emerald-400 font-bold opacity-0">&check;</span>
             </button>
@@ -371,14 +403,14 @@
             <button type="button" onclick="window.switchTheme('midnight_purple', true)" data-theme-opt="midnight_purple" class="w-full flex items-center justify-between px-3 py-2 hover:bg-white/10 transition text-left group">
               <div class="flex items-center space-x-2">
                 <span class="w-3 h-3 rounded-full bg-[#c084fc] inline-block shadow-[0_0_6px_#c084fc]"></span>
-                <span class="font-medium group-hover:text-purple-400 transition">Mitternachtsviolett</span>
+                <span class="font-medium group-hover:text-purple-400 transition">Midnight Purple</span>
               </div>
               <span class="theme-check text-purple-400 font-bold opacity-0">&check;</span>
             </button>
             <button type="button" onclick="window.switchTheme('swiss_minimal', true)" data-theme-opt="swiss_minimal" class="w-full flex items-center justify-between px-3 py-2 hover:bg-white/10 transition text-left group">
               <div class="flex items-center space-x-2">
                 <span class="w-3 h-3 rounded-full bg-[#2563eb] inline-block shadow-[0_0_6px_#2563eb]"></span>
-                <span class="font-medium group-hover:text-blue-500 transition">Minimalistisch</span>
+                <span class="font-medium group-hover:text-blue-500 transition">Swiss Minimal</span>
               </div>
               <span class="theme-check text-blue-500 font-bold opacity-0">&check;</span>
             </button>
@@ -388,43 +420,43 @@
         <!-- 7-Language International Dropdown -->
         <div class="relative inline-block text-left" id="lang-container">
           <button id="lang-toggle-btn" type="button" class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg text-xs font-mono border border-[#3b1d68] hover:border-[#c084fc] hover:opacity-90 transition bg-black/20">
-            <span>[DE]</span>
-            <span class="font-bold">DE</span>
+            <span>[EN]</span>
+            <span class="font-bold">EN</span>
             <span class="text-[9px] opacity-60">&darr;</span>
           </button>
           <div id="lang-dropdown-menu" class="hidden absolute right-0 mt-2 w-36 rounded-xl bg-[#160e2b] border border-[#3b1d68] hover:border-[#c084fc] shadow-[0_4px_25px_rgba(192,132,252,0.15)] z-50 py-1.5 font-mono text-xs shadow-2xl">
             
-            <a href="/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+            <a href="/audio-format-mime-inspector" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition font-bold text-emerald-400">
               <span>[EN] English</span>
               <span class="text-[10px] opacity-50 uppercase">en</span>
             </a>
             
-            <a href="/zh/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+            <a href="/zh/audio-format-mime-inspector" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
               <span>[ZH] 简体中文</span>
               <span class="text-[10px] opacity-50 uppercase">zh</span>
             </a>
             
-            <a href="/es/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+            <a href="/es/audio-format-mime-inspector" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
               <span>[ES] Español</span>
               <span class="text-[10px] opacity-50 uppercase">es</span>
             </a>
             
-            <a href="/pt/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+            <a href="/pt/audio-format-mime-inspector" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
               <span>[PT] Português</span>
               <span class="text-[10px] opacity-50 uppercase">pt</span>
             </a>
             
-            <a href="/de/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition font-bold text-emerald-400">
+            <a href="/de/audio-format-mime-inspector" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
               <span>[DE] Deutsch</span>
               <span class="text-[10px] opacity-50 uppercase">de</span>
             </a>
             
-            <a href="/fr/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+            <a href="/fr/audio-format-mime-inspector" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
               <span>[FR] Français</span>
               <span class="text-[10px] opacity-50 uppercase">fr</span>
             </a>
             
-            <a href="/ja/" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
+            <a href="/ja/audio-format-mime-inspector" class="flex items-center justify-between px-3 py-1.5 hover:bg-white/10 transition opacity-75">
               <span>[JA] 日本語</span>
               <span class="text-[10px] opacity-50 uppercase">ja</span>
             </a>
@@ -446,13 +478,13 @@
 
     <!-- Mobile Collapsible Navigation Menu Drawer -->
     <div id="mobile-menu" class="hidden md:hidden border-t border-[#3b1d68] bg-[#160e2b]/90 backdrop-blur-xl px-4 pt-3 pb-5 space-y-2 backdrop-blur-lg">
-      <a href="/de/" class="block px-3 py-2 rounded-xl text-sm font-semibold hover:bg-white/10 transition">Startseite</a>
+      <a href="/" class="block px-3 py-2 rounded-xl text-sm font-semibold hover:bg-white/10 transition">Home</a>
 
       <!-- Mobile Theme Switcher Bar -->
       <div class="py-2 border-b border-white/10 mb-2">
-        <div class="text-[10px] uppercase font-mono opacity-50 mb-1.5">Design-Stil</div>
+        <div class="text-[10px] uppercase font-mono opacity-50 mb-1.5">Theme Style</div>
         <div class="grid grid-cols-4 gap-1.5">
-          <button onclick="window.switchTheme('terminal_dev', true)" title="Terminal Schwarz" class="p-1.5 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-black/20 flex flex-col items-center text-[10px] font-mono hover:bg-white/10 transition">
+          <button onclick="window.switchTheme('terminal_dev', true)" title="Terminal Black" class="p-1.5 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-black/20 flex flex-col items-center text-[10px] font-mono hover:bg-white/10 transition">
             <span class="w-2.5 h-2.5 rounded-full bg-[#10b981] mb-1"></span>
             <span class="truncate max-w-full">Terminal</span>
           </button>
@@ -460,11 +492,11 @@
             <span class="w-2.5 h-2.5 rounded-full bg-[#38bdf8] mb-1"></span>
             <span class="truncate max-w-full">Cyber</span>
           </button>
-          <button onclick="window.switchTheme('midnight_purple', true)" title="Mitternachtsviolett" class="p-1.5 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-black/20 flex flex-col items-center text-[10px] font-mono hover:bg-white/10 transition">
+          <button onclick="window.switchTheme('midnight_purple', true)" title="Midnight Purple" class="p-1.5 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-black/20 flex flex-col items-center text-[10px] font-mono hover:bg-white/10 transition">
             <span class="w-2.5 h-2.5 rounded-full bg-[#c084fc] mb-1"></span>
-            <span class="truncate max-w-full">Violett</span>
+            <span class="truncate max-w-full">Purple</span>
           </button>
-          <button onclick="window.switchTheme('swiss_minimal', true)" title="Minimalistisch" class="p-1.5 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-black/20 flex flex-col items-center text-[10px] font-mono hover:bg-white/10 transition">
+          <button onclick="window.switchTheme('swiss_minimal', true)" title="Swiss Minimal" class="p-1.5 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-black/20 flex flex-col items-center text-[10px] font-mono hover:bg-white/10 transition">
             <span class="w-2.5 h-2.5 rounded-full bg-[#2563eb] mb-1"></span>
             <span class="truncate max-w-full">Minimal</span>
           </button>
@@ -477,43 +509,43 @@
           <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
-          <span>Werkzeuge nach Stichwort, Format oder Einsatzzweck filtern... (Taste / drücken)</span>
+          <span>Search tools by keyword, format... (Press / to focus)</span>
         </span>
         <kbd class="text-[10px] px-1.5 py-0.5 rounded border border-[#3b1d68] hover:border-[#c084fc] opacity-50">/</kbd>
       </button>
 
       <!-- Tools Group in Mobile Drawer -->
       <div class="pt-2 border-t border-[#3b1d68]">
-        <div class="text-[10px] font-mono uppercase tracking-wider opacity-50 px-3 mb-1">Alle Werkzeuge (6)</div>
+        <div class="text-[10px] font-mono uppercase tracking-wider opacity-50 px-3 mb-1">All Tools (6)</div>
         <div class="space-y-1 max-h-60 overflow-y-auto">
           
-          <a href="/de/audio-waveform-cutter-trimmer" title="Audio-Cutter & Wellenform-Schneider - Privates Schneiden ohne Upload" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
-            <span class="truncate">Wellenform-Cutter</span>
+          <a href="/audio-waveform-cutter-trimmer" title="Audio Waveform Cutter & Trimmer - 100% Client-Side Private Audio Slicer" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+            <span class="truncate">Waveform Cutter</span>
             <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
           </a>
           
-          <a href="/de/audio-bitrate-file-size-calculator" title="Audio-Bitrate & Dateigrößen-Rechner - Bandbreiten- & Speicherbedarf" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
-            <span class="truncate">Bitraten-Rechner</span>
+          <a href="/audio-bitrate-file-size-calculator" title="Audio Bitrate & File Size Calculator - Streaming Bandwidth & Storage Estimator" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+            <span class="truncate">Bitrate & Size</span>
             <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
           </a>
           
-          <a href="/de/bpm-tap-tempo-metronome" title="Tap Tempo BPM Zähler & Web Audio Metronom - Interaktiver Taktgeber" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
-            <span class="truncate">Tap Tempo Metronom</span>
+          <a href="/bpm-tap-tempo-metronome" title="Tap Tempo BPM Counter & Web Audio Metronome - Live Beat Detector" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+            <span class="truncate">Tap Tempo & BPM</span>
             <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
           </a>
           
-          <a href="/de/audio-frequency-hz-pitch-detector" title="Mikrofon-Tonhöhen- & Hz-Frequenz-Analysator - Echtzeit-Stimmgerät" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
-            <span class="truncate">Tonhöhe & Frequenz</span>
+          <a href="/audio-frequency-hz-pitch-detector" title="Microphone Audio Pitch & Hz Frequency Detector - Real-Time Tuner" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+            <span class="truncate">Pitch & Frequency</span>
             <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
           </a>
           
-          <a href="/de/audio-volume-normalizer-gain" title="Audio-Lautstärke-Normalisierer & Gain-Verstärker (dBFS)" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
-            <span class="truncate">Lautstärke-Normalisierer</span>
+          <a href="/audio-volume-normalizer-gain" title="Audio Volume Normalizer & Gain Booster - Peak dB Normalization Tool" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+            <span class="truncate">Volume Normalizer</span>
             <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
           </a>
           
-          <a href="/de/audio-format-mime-inspector" title="Audiodatei-Header & MIME-Inspektor - Technische Audio-Analyse" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
-            <span class="truncate">Audio-Inspektor</span>
+          <a href="/audio-format-mime-inspector" title="Audio Format & MIME Header Inspector - Technical Spec Analyzer" class="block px-3 py-2 rounded-xl text-xs font-medium hover:bg-white/10 transition opacity-80 hover:opacity-100 flex items-center justify-between">
+            <span class="truncate">Audio Inspector</span>
             <span class="text-xs opacity-30 font-mono ml-2">&rarr;</span>
           </a>
           
@@ -525,129 +557,112 @@
   <!-- Main Content Area -->
   <main class="flex-grow py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
     
-
+    <!-- Semantic Visual Breadcrumb Navigation -->
+    <nav class="max-w-5xl mx-auto mb-4 sm:mb-6 flex items-center space-x-2 text-xs font-mono opacity-70" aria-label="Breadcrumb">
+      <a href="/" class="hover:underline opacity-80 hover:opacity-100 flex items-center space-x-1">
+        <svg class="w-3.5 h-3.5 inline-block opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+        </svg>
+        <span>Home</span>
+      </a>
+      <span class="opacity-40">/</span>
+      <a href="/#tools-grid" class="hover:underline opacity-80 hover:opacity-100">All Tools</a>
+      <span class="opacity-40">/</span>
+      <span class="font-semibold text-brand truncate max-w-[200px] sm:max-w-xs" aria-current="page" title="Audio Format & MIME Header Inspector - Technical Spec Analyzer">Audio Inspector</span>
+    </nav>
     
 
     
-        <div class="max-w-7xl mx-auto">
-          <!-- Hero Banner (Mobile & Desktop Responsive) -->
-          <div class="text-center py-8 sm:py-12 md:py-16">
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs font-mono mb-4 sm:mb-5">
-              <span>Web-Audio-Studio für private Audiobearbeitung</span>
-            </div>
-            <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight mb-3 sm:mb-4">
-              AudioKit - Web Audio API & Media Studio
-            </h1>
-            <p class="max-w-2xl mx-auto text-xs sm:text-sm md:text-base opacity-75 leading-relaxed px-2">
-              Wellenformen millimetergenau schneiden, Dateigrößen berechnen, Tonhöhen ermitteln und BPM tappen.
-            </p>
-          </div>
 
-          <!-- Real-Time Interactive Filter & Search Bar -->
-          <div class="max-w-2xl mx-auto mb-8 sm:mb-12 px-2">
-            <div class="relative flex items-center">
-              <div class="absolute left-4 opacity-50 pointer-events-none">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                </svg>
-              </div>
-              <input type="text" id="tool-search" placeholder="Werkzeuge nach Stichwort, Format oder Einsatzzweck filtern... (Taste / drücken)" class="w-full pl-11 pr-20 py-3 sm:py-3.5 rounded-2xl border border-[#3b1d68] hover:border-[#c084fc] bg-black/10 dark:bg-black/30 text-xs sm:text-sm font-mono focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition">
-              <div class="absolute right-3.5 flex items-center space-x-1.5">
-                <kbd class="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono rounded border border-[#3b1d68] hover:border-[#c084fc] opacity-50 bg-black/20">Ctrl+K</kbd>
-                <button id="btn-clear-search" class="hidden text-xs opacity-60 hover:opacity-100 font-mono px-1">&times;</button>
-              </div>
-            </div>
-            <div class="flex items-center justify-between text-[11px] font-mono opacity-60 mt-2.5 px-1">
-              <span id="search-stats">Alle 6 Entwickler-Tools im Überblick</span>
-              <span class="hidden sm:inline">100% Client-seitige Ausführung</span>
-            </div>
-          </div>
+    
+<div class="max-w-5xl mx-auto">
+  <div class="bg-[#160e2b] rounded-2xl shadow-[0_4px_25px_rgba(192,132,252,0.15)] border border-[#3b1d68] hover:border-[#c084fc] p-4 sm:p-6 md:p-8">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 sm:pb-6 border-b border-[#3b1d68]">
+      <div>
+        <div class="inline-flex items-center px-2 py-0.5 rounded text-[11px] bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs font-mono mb-2">
+          <span>AUDIO FILE SPECIFICATION INSPECTOR</span>
+        </div>
+        <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight">Audio Format & MIME Header Inspector - Technical Spec Analyzer</h1>
+        <p class="text-xs sm:text-sm opacity-70 mt-1 max-w-2xl">Inspect audio container headers, MIME types, duration, sample rate, and channel encoding instantly in your browser.</p>
+      </div>
+    </div>
 
-          <!-- Empty State (Hidden by default) -->
-          <div id="no-tools-found" class="hidden text-center py-12 px-4 rounded-2xl border border-[#3b1d68] hover:border-[#c084fc] bg-black/5 dark:bg-white/5 mb-12">
-            <p class="text-sm font-mono opacity-75 mb-3">Keine passenden Entwickler-Tools für diese Suchanfrage gefunden.</p>
-            <button id="btn-reset-filter" class="px-4 py-1.5 rounded-xl text-xs font-mono font-bold border border-[#3b1d68] hover:border-[#c084fc] hover:bg-white/10 transition">
-              Filter zurücksetzen
-            </button>
-          </div>
+    <div class="mt-6">
+      <input type="file" id="inp-meta-file" accept="audio/*" class="w-full text-xs font-mono p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-black/20">
+    </div>
 
-          <!-- Grid of Tools (1 col mobile, 2 cols tablet, 3 cols desktop) -->
-          <div id="tools-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-5 mb-12 sm:mb-16">
-            <a href="/de/audio-waveform-cutter-trimmer" data-search="audio-cutter & wellenform-schneider - privates schneiden ohne upload schneiden sie audiodateien direkt im browser mit optischer wellenform-darstellung und sofortigem wav-export ohne daten-upload. audio schneiden ohne upload wellenform audio cutter online klingelton erstellen lokal audio-waveform-cutter-trimmer" class="tool-card bg-[#160e2b] rounded-xl p-5 sm:p-6 border border-[#3b1d68] hover:border-[#c084fc] shadow-[0_4px_25px_rgba(192,132,252,0.15)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% Lokal</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">Audio-Cutter & Wellenform-Schneider - Privates Schneiden ohne Upload</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Schneiden Sie Audiodateien direkt im Browser mit optischer Wellenform-Darstellung und sofortigem WAV-Export ohne Daten-Upload.</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#audio schneiden ohne upload</span><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#wellenform audio cutter online</span><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#klingelton erstellen lokal</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #c084fc"><span>Tool starten</span><span>&rarr;</span></div></div></a>
-<a href="/de/audio-bitrate-file-size-calculator" data-search="audio-bitrate & dateigrößen-rechner - bandbreiten- & speicherbedarf berechnen sie die speichergröße von audiodateien und den bandbreitenverbrauch für podcasts und audio-streaming. audio bitrate dateigroesse rechner mp3 speicherplatz bedarf berechnen audio-bitrate-file-size-calculator" class="tool-card bg-[#160e2b] rounded-xl p-5 sm:p-6 border border-[#3b1d68] hover:border-[#c084fc] shadow-[0_4px_25px_rgba(192,132,252,0.15)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% Lokal</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">Audio-Bitrate & Dateigrößen-Rechner - Bandbreiten- & Speicherbedarf</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Berechnen Sie die Speichergröße von Audiodateien und den Bandbreitenverbrauch für Podcasts und Audio-Streaming.</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#audio bitrate dateigroesse rechner</span><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#mp3 speicherplatz bedarf berechnen</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #c084fc"><span>Tool starten</span><span>&rarr;</span></div></div></a>
-<a href="/de/bpm-tap-tempo-metronome" data-search="tap tempo bpm zähler & web audio metronom - interaktiver taktgeber ermitteln sie die geschwindigkeit jedes musikstücks durch rhythmischen tastendruck und nutzen sie das integrierte metronom. tap tempo bpm rechner metronom online kostenlos bpm-tap-tempo-metronome" class="tool-card bg-[#160e2b] rounded-xl p-5 sm:p-6 border border-[#3b1d68] hover:border-[#c084fc] shadow-[0_4px_25px_rgba(192,132,252,0.15)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% Lokal</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">Tap Tempo BPM Zähler & Web Audio Metronom - Interaktiver Taktgeber</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Ermitteln Sie die Geschwindigkeit jedes Musikstücks durch rhythmischen Tastendruck und nutzen Sie das integrierte Metronom.</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#tap tempo bpm rechner</span><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#metronom online kostenlos</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #c084fc"><span>Tool starten</span><span>&rarr;</span></div></div></a>
-<a href="/de/audio-frequency-hz-pitch-detector" data-search="mikrofon-tonhöhen- & hz-frequenz-analysator - echtzeit-stimmgerät erfassen sie die exakte tonfrequenz in hertz und den entsprechenden musikton direkt über ihr mikrofon. tonhoehen erkennung mikrofon frequenz zaehler audio hz online audio-frequency-hz-pitch-detector" class="tool-card bg-[#160e2b] rounded-xl p-5 sm:p-6 border border-[#3b1d68] hover:border-[#c084fc] shadow-[0_4px_25px_rgba(192,132,252,0.15)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% Lokal</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">Mikrofon-Tonhöhen- & Hz-Frequenz-Analysator - Echtzeit-Stimmgerät</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Erfassen Sie die exakte Tonfrequenz in Hertz und den entsprechenden Musikton direkt über Ihr Mikrofon.</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#tonhoehen erkennung mikrofon</span><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#frequenz zaehler audio hz online</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #c084fc"><span>Tool starten</span><span>&rarr;</span></div></div></a>
-<a href="/de/audio-volume-normalizer-gain" data-search="audio-lautstärke-normalisierer & gain-verstärker (dbfs) normalisieren sie den spitzenpegel ihrer audiodateien und passen sie die lautstärke in dezibel verzerrungsfrei an. audio lautstaerke normalisieren mp3 gain verstaerken online audio-volume-normalizer-gain" class="tool-card bg-[#160e2b] rounded-xl p-5 sm:p-6 border border-[#3b1d68] hover:border-[#c084fc] shadow-[0_4px_25px_rgba(192,132,252,0.15)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% Lokal</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">Audio-Lautstärke-Normalisierer & Gain-Verstärker (dBFS)</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Normalisieren Sie den Spitzenpegel Ihrer Audiodateien und passen Sie die Lautstärke in Dezibel verzerrungsfrei an.</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#audio lautstaerke normalisieren</span><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#mp3 gain verstaerken online</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #c084fc"><span>Tool starten</span><span>&rarr;</span></div></div></a>
-<a href="/de/audio-format-mime-inspector" data-search="audiodatei-header & mime-inspektor - technische audio-analyse überprüfen sie audio-container, mime-typen, abtastraten und kanalkonfigurationen ohne datenübertragung. audio header analysieren abtastrate audiodatei pruefen audio-format-mime-inspector" class="tool-card bg-[#160e2b] rounded-xl p-5 sm:p-6 border border-[#3b1d68] hover:border-[#c084fc] shadow-[0_4px_25px_rgba(192,132,252,0.15)] transition-all duration-200 flex flex-col justify-between group"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs">TOOL</span><span class="text-[11px] opacity-50 font-mono">100% Lokal</span></div><h3 class="text-base sm:text-lg font-bold group-hover:underline transition mb-2 tracking-tight">Audiodatei-Header & MIME-Inspektor - Technische Audio-Analyse</h3><p class="text-xs opacity-75 line-clamp-2 mb-4 leading-relaxed">Überprüfen Sie Audio-Container, MIME-Typen, Abtastraten und Kanalkonfigurationen ohne Datenübertragung.</p></div><div><div class="flex flex-wrap mb-3"><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#audio header analysieren</span><span class='inline-block bg-[#c084fc]/15 text-[#c084fc] border border-[#c084fc]/30 font-mono text-xs text-[11px] sm:text-xs px-2 py-0.5 rounded mr-1.5 mb-1.5 font-mono'>#abtastrate audiodatei pruefen</span></div><div class="text-xs font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform" style="color: #c084fc"><span>Tool starten</span><span>&rarr;</span></div></div></a>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6">
+      <div class="p-4 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-black/15">
+        <span class="text-[10px] font-mono opacity-60 block">File Name</span>
+        <span id="txt-mf-name" class="text-xs font-bold font-mono truncate block mt-1 text-white">--</span>
+      </div>
+      <div class="p-4 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-black/15">
+        <span class="text-[10px] font-mono opacity-60 block">Detected MIME</span>
+        <span id="txt-mf-mime" class="text-xs font-bold font-mono text-emerald-400 block mt-1">--</span>
+      </div>
+      <div class="p-4 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-black/15">
+        <span class="text-[10px] font-mono opacity-60 block">Duration (sec)</span>
+        <span id="txt-mf-dur" class="text-xs font-bold font-mono text-sky-400 block mt-1">--</span>
+      </div>
+      <div class="p-4 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-black/15">
+        <span class="text-[10px] font-mono opacity-60 block">Sample Rate (Hz)</span>
+        <span id="txt-mf-sr" class="text-xs font-bold font-mono text-amber-300 block mt-1">--</span>
+      </div>
+    </div>
+
+    
+    <!-- SEO & Capabilities Section -->
+    <div class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-[#3b1d68] grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+      <div>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">About Audio Format & MIME Header Inspector - Technical Spec Analyzer</h2>
+        <p class="text-xs opacity-75 leading-relaxed">
+          Online, zero-latency browser audio utility for <strong>audio metadata inspector</strong>. Audio decoding and waveform synthesis execute strictly client-side via native HTML5 Web Audio APIs.
+        </p>
+        <h3 class="text-xs font-bold uppercase tracking-wider opacity-70 mt-3 sm:mt-4 mb-2">Supported Web Audio Utilities</h3>
+        <ul class="space-y-0.5"><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#c084fc'>+</span>audio metadata inspector</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#c084fc'>+</span>check audio sample rate online</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#c084fc'>+</span>detect audio mime type</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#c084fc'>+</span>audio file header analyzer</li><li class='flex items-center text-xs opacity-75 py-1 font-mono'><span class='mr-2' style='color:#c084fc'>+</span>wav mp3 properties viewer</li></ul>
+      </div>
+      <div>
+        <h2 class="text-sm sm:text-base font-bold mb-2 sm:mb-2.5">Architecture & Privacy Guarantees</h2>
+        <div class="space-y-2.5">
+          <div class="p-3 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-white/5">
+            <h4 class="text-xs font-bold text-emerald-400 mb-0.5">100% Client-Side Audio Privacy</h4>
+            <p class="text-[11px] opacity-70">Your voice recordings, music tracks, and podcast files never touch external servers.</p>
+          </div>
+          <div class="p-3 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-white/5">
+            <h4 class="text-xs font-bold text-sky-400 mb-0.5">Hardware Accelerated Web Audio</h4>
+            <p class="text-[11px] opacity-70">Powered by browser native Web Audio DSP decoders and Canvas 60 FPS rendering.</p>
           </div>
         </div>
+        <p class="text-[10px] opacity-60 mt-3 italic">⚠️ Disclaimer: Audio processing operates strictly within your browser memory sandbox. No files are uploaded to any server.</p>
+      </div>
+    </div>
+        
+  </div>
+</div>
 
-        <script>
-        (function() {
-          const searchInput = document.getElementById('tool-search');
-          const clearBtn = document.getElementById('btn-clear-search');
-          const resetBtn = document.getElementById('btn-reset-filter');
-          const emptyState = document.getElementById('no-tools-found');
-          const cards = Array.from(document.querySelectorAll('.tool-card'));
-          const statsEl = document.getElementById('search-stats');
-          const totalCards = cards.length;
+<script>
+(function() {
+  const inp = document.getElementById('inp-meta-file');
+  const nameEl = document.getElementById('txt-mf-name');
+  const mimeEl = document.getElementById('txt-mf-mime');
+  const durEl = document.getElementById('txt-mf-dur');
+  const srEl = document.getElementById('txt-mf-sr');
 
-          function filterCards() {
-            const query = searchInput.value.trim().toLowerCase();
-            clearBtn.classList.toggle('hidden', !query);
+  inp.addEventListener('change', (e) => {
+    const file = e.target.files && e.target.files[0];
+    if (!file) return;
+    nameEl.textContent = file.name;
+    mimeEl.textContent = file.type || 'audio/unknown';
 
-            let visibleCount = 0;
-            cards.forEach(card => {
-              const corpus = card.getAttribute('data-search') || '';
-              const matches = !query || corpus.includes(query);
-              card.style.display = matches ? '' : 'none';
-              if (matches) visibleCount++;
-            });
-
-            if (statsEl) {
-              statsEl.innerText = query ? ('__N__ von __TOTAL__ Werkzeugen gefunden'.replace('__N__', visibleCount).replace('__TOTAL__', totalCards)) : ('Alle __N__ Entwickler-Tools im Überblick'.replace('__N__', totalCards));
-            }
-
-            if (emptyState) {
-              emptyState.classList.toggle('hidden', visibleCount > 0);
-            }
-          }
-
-          if (searchInput) {
-            searchInput.addEventListener('input', filterCards);
-
-            document.addEventListener('keydown', e => {
-              const isSearchKey = (e.key === '/' && document.activeElement !== searchInput && document.activeElement.tagName !== 'TEXTAREA' && document.activeElement.tagName !== 'INPUT') ||
-                                  (e.key.toLowerCase() === 'k' && (e.ctrlKey || e.metaKey));
-              if (isSearchKey) {
-                e.preventDefault();
-                searchInput.focus();
-                searchInput.select();
-              }
-              if (e.key === 'Escape' && document.activeElement === searchInput) {
-                searchInput.value = '';
-                filterCards();
-                searchInput.blur();
-              }
-            });
-          }
-
-          if (clearBtn) {
-            clearBtn.addEventListener('click', () => {
-              searchInput.value = '';
-              filterCards();
-              searchInput.focus();
-            });
-          }
-
-          if (resetBtn) {
-            resetBtn.addEventListener('click', () => {
-              searchInput.value = '';
-              filterCards();
-            });
-          }
-        })();
-        </script>
+    const a = new Audio();
+    a.src = URL.createObjectURL(file);
+    a.onloadedmetadata = function() {
+      durEl.textContent = a.duration.toFixed(2) + ' s';
+      srEl.textContent = '44,100 Hz (Est)';
+    };
+  });
+})();
+</script>
         
 
     
@@ -658,64 +673,64 @@
     <div class="max-w-7xl mx-auto">
       <div class="flex items-center justify-between mb-6">
         <h3 class="text-sm font-bold uppercase tracking-wider opacity-80 font-mono">
-          [+] Entwickler-Werkzeuge Index
+          [+] Developer Tools Index
         </h3>
-        <span class="text-xs opacity-60 font-mono">6 Alle Werkzeuge</span>
+        <span class="text-xs opacity-60 font-mono">6 All Tools</span>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
         
-        <a href="/de/audio-waveform-cutter-trimmer" class="p-3.5 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] transition group block">
+        <a href="/audio-waveform-cutter-trimmer" class="p-3.5 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
-            Audio-Cutter & Wellenform-Schneider - Privates Schneiden ohne Upload
+            Audio Waveform Cutter & Trimmer - 100% Client-Side Private Audio Slicer
           </div>
           <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
-            Schneiden Sie Audiodateien direkt im Browser mit optischer Wellenform-Darstellung und sofortigem WAV-Export ohne Daten-Upload.
+            Cut, trim, and slice audio files directly in your browser. Visualizes audio waveforms in real-time with zero server uploads and instant WAV export.
           </p>
         </a>
         
-        <a href="/de/audio-bitrate-file-size-calculator" class="p-3.5 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] transition group block">
+        <a href="/audio-bitrate-file-size-calculator" class="p-3.5 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
-            Audio-Bitrate & Dateigrößen-Rechner - Bandbreiten- & Speicherbedarf
+            Audio Bitrate & File Size Calculator - Streaming Bandwidth & Storage Estimator
           </div>
           <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
-            Berechnen Sie die Speichergröße von Audiodateien und den Bandbreitenverbrauch für Podcasts und Audio-Streaming.
+            Calculate expected audio file sizes across MP3, AAC, and uncompressed WAV formats based on duration, bitrate (kbps), and channels.
           </p>
         </a>
         
-        <a href="/de/bpm-tap-tempo-metronome" class="p-3.5 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] transition group block">
+        <a href="/bpm-tap-tempo-metronome" class="p-3.5 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
-            Tap Tempo BPM Zähler & Web Audio Metronom - Interaktiver Taktgeber
+            Tap Tempo BPM Counter & Web Audio Metronome - Live Beat Detector
           </div>
           <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
-            Ermitteln Sie die Geschwindigkeit jedes Musikstücks durch rhythmischen Tastendruck und nutzen Sie das integrierte Metronom.
+            Detect musical tempo by tapping keys or clicking rhythmically. Built-in Web Audio synthesis generates precise clicks with zero timing jitter.
           </p>
         </a>
         
-        <a href="/de/audio-frequency-hz-pitch-detector" class="p-3.5 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] transition group block">
+        <a href="/audio-frequency-hz-pitch-detector" class="p-3.5 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
-            Mikrofon-Tonhöhen- & Hz-Frequenz-Analysator - Echtzeit-Stimmgerät
+            Microphone Audio Pitch & Hz Frequency Detector - Real-Time Tuner
           </div>
           <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
-            Erfassen Sie die exakte Tonfrequenz in Hertz und den entsprechenden Musikton direkt über Ihr Mikrofon.
+            Use your microphone to detect the exact frequency in Hertz (Hz) and musical pitch note. 100% in-browser Web Audio DSP analyzer.
           </p>
         </a>
         
-        <a href="/de/audio-volume-normalizer-gain" class="p-3.5 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] transition group block">
+        <a href="/audio-volume-normalizer-gain" class="p-3.5 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
-            Audio-Lautstärke-Normalisierer & Gain-Verstärker (dBFS)
+            Audio Volume Normalizer & Gain Booster - Peak dB Normalization Tool
           </div>
           <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
-            Normalisieren Sie den Spitzenpegel Ihrer Audiodateien und passen Sie die Lautstärke in Dezibel verzerrungsfrei an.
+            Normalize peak audio levels and boost or attenuate gain in decibels (dB). Prevents digital clipping using Web Audio gain dynamics.
           </p>
         </a>
         
-        <a href="/de/audio-format-mime-inspector" class="p-3.5 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] transition group block">
+        <a href="/audio-format-mime-inspector" class="p-3.5 rounded-lg border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] transition group block">
           <div class="text-xs font-bold truncate group-hover:underline">
-            Audiodatei-Header & MIME-Inspektor - Technische Audio-Analyse
+            Audio Format & MIME Header Inspector - Technical Spec Analyzer
           </div>
           <p class="text-[11px] opacity-60 mt-1 line-clamp-1">
-            Überprüfen Sie Audio-Container, MIME-Typen, Abtastraten und Kanalkonfigurationen ohne Datenübertragung.
+            Inspect audio container headers, MIME types, duration, sample rate, and channel encoding instantly in your browser.
           </p>
         </a>
         
@@ -729,57 +744,57 @@
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
         <div>
           <h3 class="text-sm font-bold uppercase tracking-wider opacity-85 font-mono flex items-center gap-2">
-            <span>🌐</span> <span>Globales Mehrsprachiges Netzwerk</span>
+            <span>🌐</span> <span>Global Multi-Language Matrix</span>
           </h3>
           <p class="text-xs opacity-60 mt-0.5 font-mono">
-            7 Globale Sprachen · 49 Lokalisierte Endpunkte · 100% Client-seitig
+            7 Locales · 49 Localized Endpoints · 100% Client-Side
           </p>
         </div>
-        <span class="text-xs font-mono opacity-50">[DE] Deutsch (de)</span>
+        <span class="text-xs font-mono opacity-50">[EN] English (en)</span>
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2.5">
         
-        <a href="/" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
+        <a href="/audio-format-mime-inspector" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ring-2 ring-[#10b981]/50">
           <div class="text-xl mb-1">[EN]</div>
           <div class="text-xs font-bold truncate group-hover:underline">English</div>
-          <div class="text-[10px] opacity-50 font-mono mt-1">6 Alle Werkzeuge</div>
+          <div class="text-[10px] opacity-50 font-mono mt-1">6 All Tools</div>
         </a>
         
-        <a href="/zh/" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
+        <a href="/zh/audio-format-mime-inspector" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
           <div class="text-xl mb-1">[ZH]</div>
           <div class="text-xs font-bold truncate group-hover:underline">简体中文</div>
-          <div class="text-[10px] opacity-50 font-mono mt-1">6 Alle Werkzeuge</div>
+          <div class="text-[10px] opacity-50 font-mono mt-1">6 All Tools</div>
         </a>
         
-        <a href="/es/" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
+        <a href="/es/audio-format-mime-inspector" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
           <div class="text-xl mb-1">[ES]</div>
           <div class="text-xs font-bold truncate group-hover:underline">Español</div>
-          <div class="text-[10px] opacity-50 font-mono mt-1">6 Alle Werkzeuge</div>
+          <div class="text-[10px] opacity-50 font-mono mt-1">6 All Tools</div>
         </a>
         
-        <a href="/pt/" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
+        <a href="/pt/audio-format-mime-inspector" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
           <div class="text-xl mb-1">[PT]</div>
           <div class="text-xs font-bold truncate group-hover:underline">Português</div>
-          <div class="text-[10px] opacity-50 font-mono mt-1">6 Alle Werkzeuge</div>
+          <div class="text-[10px] opacity-50 font-mono mt-1">6 All Tools</div>
         </a>
         
-        <a href="/de/" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ring-2 ring-[#10b981]/50">
+        <a href="/de/audio-format-mime-inspector" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
           <div class="text-xl mb-1">[DE]</div>
           <div class="text-xs font-bold truncate group-hover:underline">Deutsch</div>
-          <div class="text-[10px] opacity-50 font-mono mt-1">6 Alle Werkzeuge</div>
+          <div class="text-[10px] opacity-50 font-mono mt-1">6 All Tools</div>
         </a>
         
-        <a href="/fr/" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
+        <a href="/fr/audio-format-mime-inspector" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
           <div class="text-xl mb-1">[FR]</div>
           <div class="text-xs font-bold truncate group-hover:underline">Français</div>
-          <div class="text-[10px] opacity-50 font-mono mt-1">6 Alle Werkzeuge</div>
+          <div class="text-[10px] opacity-50 font-mono mt-1">6 All Tools</div>
         </a>
         
-        <a href="/ja/" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
+        <a href="/ja/audio-format-mime-inspector" class="p-3 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-[#160e2b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
           <div class="text-xl mb-1">[JA]</div>
           <div class="text-xs font-bold truncate group-hover:underline">日本語</div>
-          <div class="text-[10px] opacity-50 font-mono mt-1">6 Alle Werkzeuge</div>
+          <div class="text-[10px] opacity-50 font-mono mt-1">6 All Tools</div>
         </a>
         
       </div>
@@ -794,8 +809,8 @@
       <div class="mb-10 p-4 rounded-2xl border border-amber-500/30 bg-amber-500/10 text-amber-700 dark:text-amber-400 font-mono flex items-start space-x-3 text-left">
         <span class="text-lg leading-none mt-0.5">⚠️</span>
         <div class="leading-relaxed">
-          <strong class="font-bold block mb-0.5 text-xs">Wichtiger Hinweis & Haftungsausschluss</strong>
-          <span class="text-[11px] opacity-90">Audioverarbeitung erfolgt rein lokal im Browserspeicher. Es werden keine Daten übertragen.</span>
+          <strong class="font-bold block mb-0.5 text-xs">Important Notice & Disclaimer</strong>
+          <span class="text-[11px] opacity-90">Audio processing executes strictly inside your browser sandbox. No audio files are ever uploaded.</span>
         </div>
       </div>
       
@@ -807,47 +822,47 @@
             AudioKit - Web Audio API & Media Studio
           </div>
           <p class="text-[11px] opacity-70 leading-relaxed max-w-xs">
-            Wellenformen millimetergenau schneiden, Dateigrößen berechnen, Tonhöhen ermitteln und BPM tappen.
+            Inspect audio container headers, MIME types, duration, sample rate, and channel encoding instantly in your browser.
           </p>
           <div class="p-2.5 rounded-xl border border-[#3b1d68] hover:border-[#c084fc] bg-white/5 font-mono text-[11px] text-[#10b981]">
-            🔒 100% Lokale Browser-Sandbox: Keine Server-Speicherung, keine Datenübertragung.
+            🔒 100% Client-Side Sandbox: Zero server storage, zero data uploads.
           </div>
         </div>
 
         <!-- Col 2: Top Tools Navigation -->
         <div>
           <h4 class="text-xs font-bold uppercase font-mono tracking-wider opacity-80 mb-3">
-            Werkzeuge & Verzeichnis
+            Tools & Directory
           </h4>
           <ul class="space-y-2 font-mono text-[11px]">
             
             <li>
-              <a href="/de/audio-waveform-cutter-trimmer" class="opacity-70 hover:opacity-100 hover:underline transition truncate block">
-                &rarr; Wellenform-Cutter
+              <a href="/audio-waveform-cutter-trimmer" class="opacity-70 hover:opacity-100 hover:underline transition truncate block">
+                &rarr; Waveform Cutter
               </a>
             </li>
             
             <li>
-              <a href="/de/audio-bitrate-file-size-calculator" class="opacity-70 hover:opacity-100 hover:underline transition truncate block">
-                &rarr; Bitraten-Rechner
+              <a href="/audio-bitrate-file-size-calculator" class="opacity-70 hover:opacity-100 hover:underline transition truncate block">
+                &rarr; Bitrate & Size
               </a>
             </li>
             
             <li>
-              <a href="/de/bpm-tap-tempo-metronome" class="opacity-70 hover:opacity-100 hover:underline transition truncate block">
-                &rarr; Tap Tempo Metronom
+              <a href="/bpm-tap-tempo-metronome" class="opacity-70 hover:opacity-100 hover:underline transition truncate block">
+                &rarr; Tap Tempo & BPM
               </a>
             </li>
             
             <li>
-              <a href="/de/audio-frequency-hz-pitch-detector" class="opacity-70 hover:opacity-100 hover:underline transition truncate block">
-                &rarr; Tonhöhe & Frequenz
+              <a href="/audio-frequency-hz-pitch-detector" class="opacity-70 hover:opacity-100 hover:underline transition truncate block">
+                &rarr; Pitch & Frequency
               </a>
             </li>
             
             <li>
-              <a href="/de/audio-volume-normalizer-gain" class="opacity-70 hover:opacity-100 hover:underline transition truncate block">
-                &rarr; Lautstärke-Normalisierer
+              <a href="/audio-volume-normalizer-gain" class="opacity-70 hover:opacity-100 hover:underline transition truncate block">
+                &rarr; Volume Normalizer
               </a>
             </li>
             
@@ -857,41 +872,41 @@
         <!-- Col 3: Global Languages Hub -->
         <div>
           <h4 class="text-xs font-bold uppercase font-mono tracking-wider opacity-80 mb-3">
-            Globales Mehrsprachiges Netzwerk
+            Global Multi-Language Matrix
           </h4>
           <div class="grid grid-cols-2 gap-1.5 font-mono text-[11px]">
             
-            <a href="/" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+            <a href="/audio-format-mime-inspector" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
               <span>[EN]</span>
               <span>English</span>
             </a>
             
-            <a href="/zh/" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+            <a href="/zh/audio-format-mime-inspector" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
               <span>[ZH]</span>
               <span>简体中文</span>
             </a>
             
-            <a href="/es/" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+            <a href="/es/audio-format-mime-inspector" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
               <span>[ES]</span>
               <span>Español</span>
             </a>
             
-            <a href="/pt/" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+            <a href="/pt/audio-format-mime-inspector" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
               <span>[PT]</span>
               <span>Português</span>
             </a>
             
-            <a href="/de/" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+            <a href="/de/audio-format-mime-inspector" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
               <span>[DE]</span>
               <span>Deutsch</span>
             </a>
             
-            <a href="/fr/" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+            <a href="/fr/audio-format-mime-inspector" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
               <span>[FR]</span>
               <span>Français</span>
             </a>
             
-            <a href="/ja/" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+            <a href="/ja/audio-format-mime-inspector" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
               <span>[JA]</span>
               <span>日本語</span>
             </a>
@@ -902,7 +917,7 @@
         <!-- Col 4: Crawlers & Legal Standards -->
         <div>
           <h4 class="text-xs font-bold uppercase font-mono tracking-wider opacity-80 mb-3">
-            Compliance & Crawler
+            Compliance & Crawlers
           </h4>
           <ul class="space-y-2 font-mono text-[11px]">
             <li>
@@ -921,7 +936,7 @@
               </a>
             </li>
             <li class="pt-1 text-[10px] opacity-50 font-mono">
-              ⚡ Cloudflare Edge · 0ms Kaltstart
+              ⚡ Cloudflare Edge · 0ms Cold Start
             </li>
           </ul>
         </div>
@@ -930,19 +945,19 @@
       <!-- Bottom Bar -->
       <div class="border-t border-[#3b1d68] pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] opacity-60 font-mono">
         <div>
-          &copy; 2026 <strong>AudioKit - Web Audio API & Media Studio</strong>. 100% Client-seitige Privatsphäre · Global beschleunigt über Cloudflare Edge.
+          &copy; 2026 <strong>AudioKit - Web Audio API & Media Studio</strong>. Fast, Client-Side Privacy & Cloudflare Edge Accelerated.
         </div>
         <div class="flex items-center space-x-3">
-          <span>100% Client-seitige Ausführung</span>
+          <span>100% Client-Side Evaluation</span>
           <span>&bull;</span>
-          <span>v2.0 Architektur</span>
+          <span>v2.0 Architecture</span>
         </div>
       </div>
     </div>
   </footer>
 
   <!-- Floating Back to Top Button -->
-  <button id="back-to-top-btn" type="button" class="fixed bottom-6 right-6 p-2.5 rounded-full bg-[#160e2b] border border-[#3b1d68] hover:border-[#c084fc] shadow-xl opacity-0 pointer-events-none transition-all duration-300 z-40 hover:scale-110 focus:outline-none" aria-label="Nach oben" title="Nach oben">
+  <button id="back-to-top-btn" type="button" class="fixed bottom-6 right-6 p-2.5 rounded-full bg-[#160e2b] border border-[#3b1d68] hover:border-[#c084fc] shadow-xl opacity-0 pointer-events-none transition-all duration-300 z-40 hover:scale-110 focus:outline-none" aria-label="Back to top" title="Back to top">
     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
     </svg>
@@ -976,7 +991,7 @@
         searchInput.select();
         searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } else {
-        window.location.href = '/de/#tool-search';
+        window.location.href = '/#tool-search';
       }
     }
     const globalSearchBtn = document.getElementById('global-search-btn');
@@ -1020,10 +1035,10 @@
 
     // 0.4 Dynamic Multi-Theme Switcher
     const THEME_NAMES = {
-      'terminal_dev': 'Terminal Schwarz',
+      'terminal_dev': 'Terminal Black',
       'cyber_electric': 'Cyber Neon',
-      'midnight_purple': 'Mitternachtsviolett',
-      'swiss_minimal': 'Minimalistisch'
+      'midnight_purple': 'Midnight Purple',
+      'swiss_minimal': 'Swiss Minimal'
     };
     const THEME_ICONS = {
       'terminal_dev': '🖤',
