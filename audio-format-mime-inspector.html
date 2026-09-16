@@ -585,6 +585,9 @@
         <h1 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight">Audio Format & MIME Header Inspector - Technical Spec Analyzer</h1>
         <p class="text-xs sm:text-sm opacity-70 mt-1 max-w-2xl">Inspect audio container headers, MIME types, duration, sample rate, and channel encoding instantly in your browser.</p>
       </div>
+      <button id="btn-copy-specs" class="self-start sm:self-auto px-4 py-2 rounded-xl text-xs font-bold transition flex items-center space-x-1.5 border border-[#3b1d68] hover:border-[#c084fc] hover:bg-white/10">
+        <span>📋</span> <span>Copy Specs</span>
+      </button>
     </div>
 
     <div class="mt-6">
@@ -647,6 +650,7 @@
   const mimeEl = document.getElementById('txt-mf-mime');
   const durEl = document.getElementById('txt-mf-dur');
   const srEl = document.getElementById('txt-mf-sr');
+  const btnCopy = document.getElementById('btn-copy-specs');
 
   inp.addEventListener('change', (e) => {
     const file = e.target.files && e.target.files[0];
@@ -661,6 +665,17 @@
       srEl.textContent = '44,100 Hz (Est)';
     };
   });
+
+  if (btnCopy) {
+    btnCopy.addEventListener('click', () => {
+      const text = `Audio Specs: ${nameEl.textContent} | MIME: ${mimeEl.textContent} | Duration: ${durEl.textContent} | Rate: ${srEl.textContent}`;
+      navigator.clipboard.writeText(text).then(() => {
+        const orig = btnCopy.innerHTML;
+        btnCopy.innerHTML = '<span>✓</span> <span>Copied to Clipboard!</span>';
+        setTimeout(() => { btnCopy.innerHTML = orig; }, 1600);
+      });
+    });
+  }
 })();
 </script>
         
