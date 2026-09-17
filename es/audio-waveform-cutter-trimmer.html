@@ -532,6 +532,43 @@
   let currentSource = null;
   let startSec = 0;
   let endSec = 0;
+  let loadVersion = 0;
+  const rangeInputs = [txtStart, txtEnd].map((target, index) => {
+    const input = document.createElement('input');
+    input.type = 'number'; input.min = '0'; input.step = '0.001'; input.disabled = true;
+    input.id = index === 0 ? 'trim-start-input' : 'trim-end-input';
+    input.setAttribute('aria-label', index === 0 ? 'Inicio (segundos)' : 'Fin (segundos)');
+    input.className = 'block w-full px-2 py-1 border rounded bg-transparent';
+    target.after(input); return input;
+  });
+  function updateSelection() {
+    startSec = rangeInputs[0].value === '' ? NaN : Number(rangeInputs[0].value);
+    endSec = rangeInputs[1].value === '' ? NaN : Number(rangeInputs[1].value);
+    const valid = audioBuffer && Number.isFinite(startSec) && Number.isFinite(endSec) &&
+      startSec >= 0 && endSec <= audioBuffer.duration && endSec > startSec;
+    btnPlay.disabled = btnDl.disabled = !valid;
+    rangeInputs.forEach(input => input.setAttribute('aria-invalid', String(!valid)));
+    if (!valid) return;
+    txtStart.textContent = startSec.toFixed(3) + ' s';
+    txtEnd.textContent = endSec.toFixed(3) + ' s';
+    mStart.style.left = (startSec / audioBuffer.duration * 100) + '%';
+    mEnd.style.left = (endSec / audioBuffer.duration * 100) + '%';
+  }
+  rangeInputs.forEach(input => input.addEventListener('input', updateSelection));
+  [mStart, mEnd].forEach((marker, index) => {
+    marker.style.touchAction = 'none';
+    marker.addEventListener('pointerdown', event => {
+      if (!audioBuffer) return;
+      marker.setPointerCapture(event.pointerId); event.preventDefault();
+    });
+    marker.addEventListener('pointermove', event => {
+      if (!audioBuffer || !marker.hasPointerCapture(event.pointerId)) return;
+      const rect = cvs.getBoundingClientRect();
+      const seconds = Math.max(0, Math.min(audioBuffer.duration, (event.clientX - rect.left) / rect.width * audioBuffer.duration));
+      rangeInputs[index].value = seconds.toFixed(3); updateSelection();
+    });
+  });
+
 
   dropZone.addEventListener('click', () => inpFile.click());
   inpFile.addEventListener('change', (e) => {
@@ -546,28 +583,31 @@
     if (e.dataTransfer.files && e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);
   });
 
-  function handleFile(file) {
-    txtFile.textContent = file.name + ' (' + (file.size / 1024 / 1024).toFixed(2) + ' MB)';
-    const reader = new FileReader();
-    reader.onload = function(ev) {
+  async function handleFile(file) {
+    const version = ++loadVersion;
+    if (currentSource) { try { currentSource.stop(); } catch (error) {} currentSource = null; }
+    audioBuffer = null;
+    btnPlay.disabled = btnStop.disabled = btnDl.disabled = true;
+    rangeInputs.forEach(input => { input.disabled = true; input.value = ''; });
+    mStart.classList.add('hidden'); mEnd.classList.add('hidden');
+    [txtStart, txtEnd, txtDur, txtSr].forEach(el => { el.textContent = '-'; });
+    ctx.clearRect(0, 0, cvs.width, cvs.height);
+    txtFile.textContent = file.name;
+    try {
       if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      audioCtx.decodeAudioData(ev.target.result, function(buffer) {
-        audioBuffer = buffer;
-        startSec = 0;
-        endSec = buffer.duration;
-        txtSr.textContent = buffer.sampleRate + ' Hz';
-        txtDur.textContent = buffer.duration.toFixed(2) + ' s';
-        txtStart.textContent = '0.00 s';
-        txtEnd.textContent = buffer.duration.toFixed(2) + ' s';
-        btnPlay.disabled = false;
-        btnStop.disabled = false;
-        btnDl.disabled = false;
-        mStart.classList.remove('hidden');
-        mEnd.classList.remove('hidden');
-        drawWaveform(buffer);
-      });
-    };
-    reader.readAsArrayBuffer(file);
+      const buffer = await audioCtx.decodeAudioData(await file.arrayBuffer());
+      if (version !== loadVersion) return;
+      audioBuffer = buffer;
+      txtSr.textContent = buffer.sampleRate + ' Hz';
+      txtDur.textContent = buffer.duration.toFixed(3) + ' s';
+      rangeInputs.forEach(input => { input.disabled = false; input.max = String(buffer.duration); });
+      rangeInputs[0].value = '0'; rangeInputs[1].value = String(buffer.duration);
+      btnStop.disabled = false;
+      mStart.classList.remove('hidden'); mEnd.classList.remove('hidden');
+      updateSelection(); drawWaveform(buffer);
+    } catch (error) {
+      if (version === loadVersion) txtFile.textContent = 'No se pudo decodificar el audio.';
+    }
   }
 
   function drawWaveform(buffer) {
@@ -599,14 +639,19 @@
     ctx.stroke();
   }
 
-  btnPlay.addEventListener('click', () => {
+  btnPlay.addEventListener('click', async () => {
     if (!audioBuffer) return;
-    if (currentSource) currentSource.stop();
+    if (currentSource) { try { currentSource.stop(); } catch (error) {} }
+    const selectedBuffer = audioBuffer;
+    const selectedStart = startSec;
+    const selectedEnd = endSec;
+    await audioCtx.resume();
+    if (audioBuffer !== selectedBuffer) return;
     currentSource = audioCtx.createBufferSource();
     currentSource.buffer = audioBuffer;
     currentSource.connect(audioCtx.destination);
-    const duration = Math.max(0.1, endSec - startSec);
-    currentSource.start(0, startSec, duration);
+    const duration = selectedEnd - selectedStart;
+    currentSource.start(0, selectedStart, duration);
   });
 
   btnStop.addEventListener('click', () => {
@@ -615,10 +660,11 @@
 
   btnDl.addEventListener('click', () => {
     if (!audioBuffer) return;
-    const cutDuration = Math.max(0.1, endSec - startSec);
     const rate = audioBuffer.sampleRate;
-    const cutSamples = Math.floor(cutDuration * rate);
     const startOffset = Math.floor(startSec * rate);
+    const endOffset = Math.min(audioBuffer.length, Math.ceil(endSec * rate));
+    const cutSamples = endOffset - startOffset;
+    if (cutSamples <= 0) return;
     const channels = audioBuffer.numberOfChannels;
 
     // Build raw WAV in client memory
@@ -658,7 +704,7 @@
     a.href = url;
     a.download = 'trimmed_audio.wav';
     a.click();
-    URL.revokeObjectURL(url);
+    setTimeout(() => URL.revokeObjectURL(url), 30000);
   });
 })();
 </script>

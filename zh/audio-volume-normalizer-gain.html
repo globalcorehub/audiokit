@@ -497,10 +497,11 @@
   }
 
   rng.addEventListener('input', update);
-  btnNorm.addEventListener('click', () => {
-    rng.value = 3.5;
-    update();
-  });
+  btnNorm.disabled = true;
+  const status = document.createElement('p');
+  status.setAttribute('role', 'status');
+  status.textContent = '峰值归一化暂不可用。此页面仅将分贝换算为线性增益。';
+  btnNorm.after(status);
   update();
 })();
 </script>

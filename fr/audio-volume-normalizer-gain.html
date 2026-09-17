@@ -497,10 +497,11 @@
   }
 
   rng.addEventListener('input', update);
-  btnNorm.addEventListener('click', () => {
-    rng.value = 3.5;
-    update();
-  });
+  btnNorm.disabled = true;
+  const status = document.createElement('p');
+  status.setAttribute('role', 'status');
+  status.textContent = 'La normalisation de crête est indisponible. Cette page convertit uniquement les décibels en gain linéaire.';
+  btnNorm.after(status);
   update();
 })();
 </script>

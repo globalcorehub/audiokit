@@ -497,10 +497,11 @@
   }
 
   rng.addEventListener('input', update);
-  btnNorm.addEventListener('click', () => {
-    rng.value = 3.5;
-    update();
-  });
+  btnNorm.disabled = true;
+  const status = document.createElement('p');
+  status.setAttribute('role', 'status');
+  status.textContent = 'Peak normalization is unavailable. This page only converts decibels to linear gain.';
+  btnNorm.after(status);
   update();
 })();
 </script>

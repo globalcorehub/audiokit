@@ -497,10 +497,11 @@
   }
 
   rng.addEventListener('input', update);
-  btnNorm.addEventListener('click', () => {
-    rng.value = 3.5;
-    update();
-  });
+  btnNorm.disabled = true;
+  const status = document.createElement('p');
+  status.setAttribute('role', 'status');
+  status.textContent = 'A normalização de pico está indisponível. Esta página apenas converte decibéis em ganho linear.';
+  btnNorm.after(status);
   update();
 })();
 </script>
