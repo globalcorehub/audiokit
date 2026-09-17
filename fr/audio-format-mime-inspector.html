@@ -485,41 +485,7 @@
   </div>
 </div>
 
-<script>
-(function() {
-  const inp = document.getElementById('inp-meta-file');
-  const nameEl = document.getElementById('txt-mf-name');
-  const mimeEl = document.getElementById('txt-mf-mime');
-  const durEl = document.getElementById('txt-mf-dur');
-  const srEl = document.getElementById('txt-mf-sr');
-  const btnCopy = document.getElementById('btn-copy-specs');
-
-  inp.addEventListener('change', (e) => {
-    const file = e.target.files && e.target.files[0];
-    if (!file) return;
-    nameEl.textContent = file.name;
-    mimeEl.textContent = file.type || 'audio/unknown';
-
-    const a = new Audio();
-    a.src = URL.createObjectURL(file);
-    a.onloadedmetadata = function() {
-      durEl.textContent = a.duration.toFixed(2) + ' s';
-      srEl.textContent = '44,100 Hz (Est)';
-    };
-  });
-
-  if (btnCopy) {
-    btnCopy.addEventListener('click', () => {
-      const text = `Audio Specs: ${nameEl.textContent} | MIME: ${mimeEl.textContent} | Duration: ${durEl.textContent} | Rate: ${srEl.textContent}`;
-      navigator.clipboard.writeText(text).then(() => {
-        const orig = btnCopy.innerHTML;
-        btnCopy.innerHTML = '<span>✓</span> <span>Copié dans le presse-papiers !</span>';
-        setTimeout(() => { btnCopy.innerHTML = orig; }, 1600);
-      });
-    });
-  }
-})();
-</script>
+<script src="/tool-audio-metadata.js" defer></script>
         
   </main>
 

@@ -511,11 +511,14 @@
   const txtWav = document.getElementById('txt-wav-size');
   const txtBw = document.getElementById('txt-bw-hr');
 
+  const validation = document.createElement('p');
+  validation.setAttribute('role', 'status'); validation.setAttribute('aria-live', 'polite');
+  document.querySelector('main').appendChild(validation);
+  const errorMessage = ({"en":"Enter all required values within the displayed ranges.","zh":"请在显示范围内填写所有必填数值。","de":"Bitte alle Pflichtwerte innerhalb der angezeigten Bereiche eingeben.","es":"Introduzca todos los valores dentro de los límites indicados.","fr":"Saisissez toutes les valeurs dans les limites indiquées.","ja":"すべての必須値を表示範囲内で入力してください。","pt":"Preencha todos os valores dentro dos limites indicados."})[document.documentElement.lang.split('-')[0]] || "Enter all required values within the displayed ranges.";
+  function validValues(entries) { const valid = entries.map(([el, min, max, integer]) => { const n = Number(el.value); const ok = el.value.trim() !== '' && Number.isFinite(n) && n >= min && n <= max && (!integer || Number.isInteger(n)); el.setAttribute('aria-invalid', String(!ok)); return ok; }).every(Boolean); validation.textContent = valid ? '' : errorMessage; return valid; }
   function update() {
-    const kbps = parseFloat(b.value) || 320;
-    const mins = parseFloat(m.value) || 1;
-    const channels = parseFloat(ch.value) || 2;
-
+    if (!validValues([[b,1,10000],[m,0,1e6],[ch,1,32,true]])) { [txtSize,txtWav,txtBw].forEach(el => el.textContent = ''); return; }
+    const kbps = Number(b.value), mins = Number(m.value), channels = Number(ch.value);
     const seconds = mins * 60;
     const sizeMb = (kbps * 1000 * seconds) / (8 * 1024 * 1024);
     // Uncompressed 44.1kHz 16bit stereo
