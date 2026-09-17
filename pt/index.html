@@ -10,13 +10,13 @@
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://audiokit.globalcorehub.com/pt/">
   <link rel="alternate" hreflang="en" href="https://audiokit.globalcorehub.com/" />
-  <link rel="alternate" hreflang="zh-CN" href="https://audiokit.globalcorehub.com/zh" />
-  <link rel="alternate" hreflang="zh" href="https://audiokit.globalcorehub.com/zh" />
-  <link rel="alternate" hreflang="es" href="https://audiokit.globalcorehub.com/es" />
-  <link rel="alternate" hreflang="pt" href="https://audiokit.globalcorehub.com/pt" />
-  <link rel="alternate" hreflang="de" href="https://audiokit.globalcorehub.com/de" />
-  <link rel="alternate" hreflang="fr" href="https://audiokit.globalcorehub.com/fr" />
-  <link rel="alternate" hreflang="ja" href="https://audiokit.globalcorehub.com/ja" />
+  <link rel="alternate" hreflang="zh-CN" href="https://audiokit.globalcorehub.com/zh/" />
+  <link rel="alternate" hreflang="zh" href="https://audiokit.globalcorehub.com/zh/" />
+  <link rel="alternate" hreflang="es" href="https://audiokit.globalcorehub.com/es/" />
+  <link rel="alternate" hreflang="pt" href="https://audiokit.globalcorehub.com/pt/" />
+  <link rel="alternate" hreflang="de" href="https://audiokit.globalcorehub.com/de/" />
+  <link rel="alternate" hreflang="fr" href="https://audiokit.globalcorehub.com/fr/" />
+  <link rel="alternate" hreflang="ja" href="https://audiokit.globalcorehub.com/ja/" />
   <link rel="alternate" hreflang="x-default" href="https://audiokit.globalcorehub.com/" />
 
   <!-- Dynamic Inline SVG Favicon (Hardware DAW Waveform & VU Meter Icon) -->
@@ -754,11 +754,20 @@
       }, 2000);
     };
 
-    // Smooth Centered Search Focus Runtime
+    // Smooth Centered Search Focus Runtime with Header Offset
     window.focusAndCenterSearch = function() {
       const searchInput = document.getElementById('tool-search');
       if (searchInput) {
-        searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const header = document.querySelector('header') || document.querySelector('nav');
+        const headerOffset = (header ? header.offsetHeight : 70) + 24;
+        const elementPosition = searchInput.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: Math.max(0, offsetPosition),
+          behavior: 'smooth'
+        });
+
         setTimeout(() => {
           try {
             searchInput.focus({ preventScroll: true });
